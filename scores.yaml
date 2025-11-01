@@ -62,11 +62,11 @@
   Airspace requiring multiple frequencies: 5
 
 10. Common aircraft speed differential:
-  "<30kt (C172–C206)": 1
-  "30–49kt (C172–PA34)": 2
-  "50–69kt (C172–BE1900D)": 3
-  "70–89kt (C172–B737)": 4
-  "≥90kt (C172–B747)": 5
+  "<30kt (C172-C206)": 1
+  "30-49kt (C172-PA34)": 2
+  "50-69kt (C172-BE1900D)": 3
+  "70-89kt (C172-B737)": 4
+  "≥90kt (C172-B747)": 5
 
 11. Regular diverse operation types:
   Military aircraft: 1
@@ -77,14 +77,14 @@
 
 12. Presence of other aircraft- traffic volume:
   Light (<20,000 annual): 1
-  Low (20,000–39,999): 2
-  Moderate (40,000–59,999): 3
-  High (60,000–79,999): 4
+  Low (20,000-39,999): 2
+  Moderate (40,000-59,999): 3
+  High (60,000-79,999): 4
   Very high (80,000+): 5
 
 13. Presence of other aircraft- traffic peaks:
-  Daily peaks 5–9 per hour: 1
-  Daily peaks 10–19 per hour: 2
-  Daily peaks 20–29 per hour: 3
-  Daily peaks 30–39 per hour: 4
+  Daily peaks 5-9 per hour: 1
+  Daily peaks 10-19 per hour: 2
+  Daily peaks 20-29 per hour: 3
+  Daily peaks 30-39 per hour: 4
   Daily peaks 40+ per hour: 5

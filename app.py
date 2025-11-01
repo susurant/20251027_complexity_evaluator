@@ -21,7 +21,7 @@ col1, col2 = st.columns(2)
 
 with col1:
     ifr_value = st.number_input(
-        "IFR Value",
+        "Annual IFR movements",
         min_value=0.0,
         value=10000.0,
         step=100.0,
@@ -31,13 +31,17 @@ with col1:
 
 with col2:
     vfr_value = st.number_input(
-        "VFR Value",
+        "Annual VFR movements",
         min_value=0.0,
         value=20000.0,
         step=100.0,
         format="%.2f",
         help="Numeric value used to calculate VFR proportion"
     )
+
+st.markdown("""
+# Complexity indicators (leading to pilot workload)				
+""")
 
 # --- Custom CSS ---
 st.markdown("""
