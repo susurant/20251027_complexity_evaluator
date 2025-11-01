@@ -1,6 +1,6 @@
 streamlit
 xlsxwriter
-yaml
+pyyaml
 decimal
 pandas 
 io
