@@ -210,7 +210,7 @@ with tab1:
     #            print(total_ifr)
     #            total_ifr += float(atc_i_questions[question].get(numeric_key, 0))
 
-    groups = ["IFR","ATC-I", "AFIS-I", "UNICOM-I"]
+    groups = ["IFR", "UNICOM-I", "AFIS-I","ATC-I"]
     ifr_totals = {}
 
     for group in groups:
@@ -226,7 +226,7 @@ with tab1:
 
 
         
-    groups = ["VFR","ATC-V", "AFIS-V", "UNICOM-V"]
+    groups = ["VFR", "UNICOM-V", "AFIS-V","ATC-V"]
     vfr_totals = {}
 
     for group in groups:
@@ -248,13 +248,9 @@ with tab1:
     else:
         level, color = "Very High", "🔴"
 
-
-    print(vfr_totals.items())
-    print(ifr_totals.items())
-
-
     # --- Calculate proportional weights ---
     total_value = ifr_value + vfr_value
+    print(total_value)
     ifr_ratio = ifr_value / total_value if total_value > 0 else 0.25
     vfr_ratio = vfr_value / total_value if total_value > 0 else 0.75
 
@@ -408,7 +404,20 @@ with tab1:
         mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
     )
 with tab2:
-    # Define your high-level structure
+
+    
+
+    print(vfr_totals.items())
+    print(ifr_totals.items())
+    ifr = ifr_totals
+    vfr = vfr_totals
+    # Map section names to sheet prefixes
+    section_to_prefix = {
+        "With ATC": "ATC",
+        "With AFIS": "AFIS",
+        "With UNICOM": "UNICOM",
+    }
+
     sections = {
         "AERODROME INDEX": ["IFR", "VFR"],
         "No ATS": ["IFR Score", "VFR Score", "Weighted Score"],
@@ -417,19 +426,69 @@ with tab2:
         "With UNICOM": ["IFR Score", "VFR Score", "Weighted Score"],
     }
 
-    # Generate the index labels programmatically
-    index = []
-    for section, rows in sections.items():
+    def get_raw_score(section, row):
         if section == "AERODROME INDEX":
-            index.append(section)
-        for row in rows:
-            if section == "AERODROME INDEX":
-                index.append(row)
+            if row == "IFR":
+                return f"{round(float(ifr_ratio) * 100, 0)}%"
+            if row == "VFR":
+                return f"{round(float(vfr_ratio) * 100, 0)}%"
+
+        if section == "No ATS":
+            if row == "IFR Score":
+                return ifr_totals.get("IFR", "")
+            elif row == "VFR Score":
+                return vfr_totals.get("VFR", "")
+            elif row == "Weighted Score":
+                i_val = ifr_totals.get("IFR", "")
+                v_val = vfr_totals.get("VFR", "")
+                return int(Decimal((i_val * ifr_ratio) + (v_val * vfr_ratio)).quantize(Decimal('1'), rounding=ROUND_HALF_UP))
             else:
-                index.append(f"{section} - {row}")
+                return ""
 
-    # Create empty dataframe
-    df = pd.DataFrame("", index=index, columns=["Raw", "Normalised"])
+        # For With ATC, With AFIS, With UNICOM
+        prefix = section_to_prefix.get(section)
+        if not prefix:
+            return ""
 
-    # Display
+        if row == "IFR Score":
+            return ifr_totals.get(f"{prefix}-I", "")
+        elif row == "VFR Score":
+            return vfr_totals.get(f"{prefix}-V", "")
+        elif row == "Weighted Score":
+            i_val = ifr_totals.get(f"{prefix}-I")
+            v_val = vfr_totals.get(f"{prefix}-V")
+            if i_val is not None and v_val is not None:
+                return int(Decimal((i_val * ifr_ratio) + (v_val * vfr_ratio)).quantize(Decimal('1'), rounding=ROUND_HALF_UP))
+            else:
+                return ""
+        else:
+            return ""
+
+
+    # ---- Build DataFrame ----
+    rows = []
+    raw_vals = []
+
+    for section, row_names in sections.items():
+        rows.append(section)  # Section header
+        raw_vals.append("")
+        for row in row_names:
+            rows.append(row)
+            raw_vals.append(get_raw_score(section, row))
+
+    df = pd.DataFrame({"Raw": raw_vals}, index=rows)
+
+    # ---- Normalised column ----
+    def normalise(value):
+        try:
+            return int(Decimal(float(value) * 0.145).quantize(Decimal('1'), rounding=ROUND_HALF_UP)) #round(float(value) * 0.145, 2)
+        except (ValueError, TypeError):
+            return ""
+
+    df["Normalised"] = df["Raw"].apply(normalise)
+
+
+    # Streamlit display
+    #st.set_page_config(page_title="Aerodrome Scores Table", layout="centered")
+    st.title("✈️ Aerodrome Scoring Table")
     st.table(df)
