@@ -180,17 +180,111 @@ with tab1:
     left_cats = categories[:midpoint]
     right_cats = categories[midpoint:]
 
+    def get_percentage_str(question, selected_text):
+        numeric_key = SCORES_LABELS.get(question, {}).get(selected_text)
+        if numeric_key is not None:
+            value_dict = SCORES_IFR.get(question, {}).get(numeric_key)
+            if value_dict is not None:
+                percentage = value_dict.get("percentage", 0)
+                if percentage != 0:
+                    return f" ({percentage:+.0f}%)"
+        return ""
+
+    #with col1:
+    #    for category in left_cats:
+    #        st.markdown(f"<div class='select-panel'><strong>{category}</strong>", unsafe_allow_html=True)
+    #        answers[category] = st.selectbox("", list(SCORES_LABELS[category].keys()), key=category)
     with col1:
         for category in left_cats:
-            #st.markdown(f"**{category}**")
-            st.markdown(f"<div class='select-panel'><strong>{category}</strong>", unsafe_allow_html=True)
-            answers[category] = st.selectbox("", list(SCORES_LABELS[category].keys()), key=category)
+            # 1️⃣ Markdown label at the top
+            st.markdown(f"**{category}**", unsafe_allow_html=True)
+
+            # 2️⃣ Compute feedback (colored_html) based on previous selection
+            prev_selection = st.session_state.get(category, None)
+            percentage_labels = []
+
+            if prev_selection:
+                numeric_key = SCORES_LABELS.get(category, {}).get(prev_selection)
+                groups = ["UNICOM-I", "AFIS-I", "ATC-I"]
+
+                for group in groups:
+                    group_questions = SCORES_IFR.get(group, {}).get(category, {})
+                    if numeric_key in group_questions:
+                        pct = group_questions[numeric_key]["percentage"]
+                        percentage_labels.append((group[:-2], pct))
+
+            if percentage_labels:
+                colored_html = " | ".join(
+                    f"<span style='color:{'red' if pct < 0 else 'green' if pct > 0 else 'black'};"
+                    f" font-weight:bold;'>{group}: {pct:+.0f}%</span>"
+                    for group, pct in percentage_labels
+                )
+                # 3️⃣ Show it *below the label, above the selectbox*
+                st.markdown(
+                    f"<div style='font-size:0.9rem; margin-bottom:4px;'> {colored_html}</div>",
+                    unsafe_allow_html=True
+                )
+
+            # 4️⃣ Then render the interactive selectbox
+            selected_answer = st.selectbox(
+                label=category,
+                options=list(SCORES_LABELS[category].keys()),
+                key=category,
+                label_visibility="collapsed"
+            )
+
+            answers[category] = selected_answer
+
+
+    #with col2:
+    #    for category in right_cats:
+    #        st.markdown(f"<div class='select-panel'><strong>{category}</strong>", unsafe_allow_html=True)
+    #        answers[category] = st.selectbox("", list(SCORES_LABELS[category].keys()), key=category)
+
 
     with col2:
         for category in right_cats:
-            #st.markdown(f"**{category}**")
-            st.markdown(f"<div class='select-panel'><strong>{category}</strong>", unsafe_allow_html=True)
-            answers[category] = st.selectbox("", list(SCORES_LABELS[category].keys()), key=category)
+            # 1️⃣ Markdown label at the top
+            st.markdown(f"**{category}**", unsafe_allow_html=True)
+
+            # 2️⃣ Compute feedback (colored_html) based on previous selection
+            prev_selection = st.session_state.get(category, None)
+            percentage_labels = []
+
+            if prev_selection:
+                numeric_key = SCORES_LABELS.get(category, {}).get(prev_selection)
+                groups = ["UNICOM-I", "AFIS-I", "ATC-I"]
+
+                for group in groups:
+                    group_questions = SCORES_IFR.get(group, {}).get(category, {})
+                    if numeric_key in group_questions:
+                        pct = group_questions[numeric_key]["percentage"]
+                        percentage_labels.append((group[:-2], pct))
+
+            if percentage_labels:
+                colored_html = " | ".join(
+                    f"<span style='color:{'red' if pct < 0 else 'green' if pct > 0 else 'black'};"
+                    f" font-weight:bold;'>{group}: {pct:+.0f}%</span>"
+                    for group, pct in percentage_labels
+                )
+                # 3️⃣ Show it *below the label, above the selectbox*
+                st.markdown(
+                    f"<div style='font-size:0.9rem; margin-bottom:4px;'> {colored_html}</div>",
+                    unsafe_allow_html=True
+                )
+
+            # 4️⃣ Then render the interactive selectbox
+            selected_answer = st.selectbox(
+                label=category,
+                options=list(SCORES_LABELS[category].keys()),
+                key=category,
+                label_visibility="collapsed"
+            )
+
+            answers[category] = selected_answer
+
+
+                #st.markdown("IFR: " + f", ".join(percentage_labels),unsafe_allow_html=True)
 
     # --- Calculate total score ---
     total_score = 0
@@ -199,58 +293,77 @@ with tab1:
         if numeric_key is not None:
             total_score += numeric_key  # total "risk" score (based on label mapping)
 
-    # --- Calculate total IFR for ATC-I only ---
-    #total_ifr = 0.0
-    #atc_i_questions = SCORES_IFR.get("ATC-V", {})
-
-    #for question, selected_text in answers.items():
-    #    if question in atc_i_questions:
-    #        numeric_key = SCORES_LABELS.get(question, {}).get(selected_text)
-    #        if numeric_key is not None:
-    #            print(total_ifr)
-    #            total_ifr += float(atc_i_questions[question].get(numeric_key, 0))
-
     groups = ["IFR", "UNICOM-I", "AFIS-I","ATC-I"]
     ifr_totals = {}
 
+    #for group in groups:
+    #    total_ifr = 0.0
+    #    group_questions = SCORES_IFR.get(group, {})
+        
+    #    for question, selected_text in answers.items():
+    #        if question in group_questions:
+    #            numeric_key = SCORES_LABELS.get(question, {}).get(selected_text)
+    #            if numeric_key is not None:
+    #                total_ifr += float(group_questions[question].get(numeric_key, 0))
+    #    ifr_totals[group] = total_ifr
     for group in groups:
         total_ifr = 0.0
         group_questions = SCORES_IFR.get(group, {})
         
         for question, selected_text in answers.items():
             if question in group_questions:
+                # Map the answer text to numeric key
                 numeric_key = SCORES_LABELS.get(question, {}).get(selected_text)
                 if numeric_key is not None:
-                    total_ifr += float(group_questions[question].get(numeric_key, 0))
+                    # Grab the "value" from the YAML/dict structure
+                    value_dict = group_questions[question].get(numeric_key, {'value': 0, 'percentage': 0})
+                    value_dict = group_questions[question].get(numeric_key)  # this should be {'value': ..., 'percentage': ...}
+                    if isinstance(value_dict, dict):
+                        val = value_dict.get("value", 0)
+                        total_ifr += float(val)
+                    else:
+                        total_ifr += 0  # fallback if something went wrong
+                    #total_ifr += float(value_dict.get("value", 0))
+        
         ifr_totals[group] = total_ifr
-
 
         
     groups = ["VFR", "UNICOM-V", "AFIS-V","ATC-V"]
     vfr_totals = {}
 
+    # for group in groups:
+    #     total_vfr = 0.0
+    #     group_questions = SCORES_VFR.get(group, {})
+    #     for question, selected_text in answers.items():
+    #         if question in group_questions:
+    #             numeric_key = SCORES_LABELS.get(question, {}).get(selected_text)
+    #             if numeric_key is not None:
+    #                 total_vfr += float(group_questions[question].get(numeric_key, 0))
+    #     vfr_totals[group] = total_vfr
+
     for group in groups:
         total_vfr = 0.0
         group_questions = SCORES_VFR.get(group, {})
+        
         for question, selected_text in answers.items():
             if question in group_questions:
+                # Map the answer text to numeric key
                 numeric_key = SCORES_LABELS.get(question, {}).get(selected_text)
                 if numeric_key is not None:
-                    total_vfr += float(group_questions[question].get(numeric_key, 0))
+                    # Grab the "value" from the YAML/dict structure
+                    value_dict = group_questions[question].get(numeric_key, {'value': 0, 'percentage': 0})
+                    value_dict = group_questions[question].get(numeric_key)  # this should be {'value': ..., 'percentage': ...}
+                    if isinstance(value_dict, dict):
+                        val = value_dict.get("value", 0)
+                        total_vfr += float(val)
+                    else:
+                        total_vfr += 0  # fallback if something went wrong
+                    #total_ifr += float(value_dict.get("value", 0))
+        
         vfr_totals[group] = total_vfr
-    # --- Determine risk level ---
-    if total_score <= 20:
-        level, color = "Low", "🟢"
-    elif total_score <= 40:
-        level, color = "Moderate", "🟡"
-    elif total_score <= 55:
-        level, color = "High", "🟠"
-    else:
-        level, color = "Very High", "🔴"
 
     # --- Calculate proportional weights ---
     total_value = ifr_value + vfr_value
-    print(total_value)
     ifr_ratio = ifr_value / total_value if total_value > 0 else 0.25
     vfr_ratio = vfr_value / total_value if total_value > 0 else 0.75
 
@@ -275,16 +388,6 @@ with tab1:
             new_key: int(Decimal(((v1 * ifr_ratio) + (v2 * vfr_ratio)) * num ).quantize(Decimal('1'), rounding=ROUND_HALF_UP))  #new_key: round(((v1 * 0.25) + (v2 * 0.75)))
         for new_key, (v1, v2) in zip(new_keys, zip(ifr_totals.values(), vfr_totals.values()))
     }
-    print(result)
-    # --- Display results ---
-    #st.markdown(f"""
-    #### Total Risk Score: {total_score}
-    #### Risk Level: {color} {level}
-    #### Total IFR Score: {ifr_totals}
-    #### Total VFR Score: {vfr_totals}
-    ### Result: {result}
-    #
-    #""")
 
     # --- Optional: Weighted Aerodrome Index ---
     aero_data = result
@@ -356,8 +459,6 @@ with tab1:
 
     st.markdown(html_table, unsafe_allow_html=True)
 
-    #st.markdown(f"**Selected Aerodrome Type:** {selected} — **Index:** {aero_data[selected]}")
-
     import pandas as pd
     from io import BytesIO
 
@@ -405,10 +506,6 @@ with tab1:
     )
 with tab2:
 
-    
-
-    print(vfr_totals.items())
-    print(ifr_totals.items())
     ifr = ifr_totals
     vfr = vfr_totals
     # Map section names to sheet prefixes

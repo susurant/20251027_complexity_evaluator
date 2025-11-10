@@ -1,0 +1,553 @@
+ATC-I:
+  1. Presence of animals or people on aerodrome:
+    1: 1.0
+    2: 9.0
+    3: 12.0
+    4: 14.0
+    5: 15.0
+  2. External hazards affecting aerodrome:
+    1: 1.0
+    2: 9.0
+    3: 12.0
+    4: 20.0
+    5: 25.0
+  3. Aeronautical objects affecting aerodrome:
+    1: 1.0
+    2: 9.0
+    3: 12.0
+    4: 16.0
+    5: 17.5
+  4. Terrain and vegetation:
+    1: 1.0
+    2: 10.0
+    3: 15.0
+    4: 20.0
+    5: 25.0
+  5. Common meteorological phenomena:
+    1: 10.0
+    2: 18.0
+    3: 27.0
+    4: 36.0
+    5: 45.0
+  6. Aerodrome layout:
+    1: 1.0
+    2: 9.0
+    3: 12.0
+    4: 0.8
+    5: 20.0
+  7. Runway configuration:
+    1: 10.0
+    2: 20.0
+    3: 27.0
+    4: 32.0
+    5: 35.0
+  8. Aerodrome traffic circuit:
+    1: 10.0
+    2: 18.0
+    3: 27.0
+    4: 32.0
+    5: 40.0
+  9. Airspace and procedures:
+    1: 12.0
+    2: 22.0
+    3: 31.5
+    4: 40.0
+    5: 50.0
+  10. Common aircraft speed differential:
+    1: 10.0
+    2: 18.0
+    3: 27.0
+    4: 36.0
+    5: 45.0
+  11. Regular diverse operation types:
+    1: 20.0
+    2: 36.0
+    3: 48.0
+    4: 56.0
+    5: 60.0
+  12. Presence of other aircraft- traffic volume:
+    1: 20.0
+    2: 36.0
+    3: 48.0
+    4: 56.0
+    5: 60.0
+  13. Presence of other aircraft- traffic peaks:
+    1: 20.0
+    2: 36.0
+    3: 48.0
+    4: 56.0
+    5: 60.0
+ATC-V:
+  1. Presence of animals or people on aerodrome:
+    1: 1.0
+    2: 9.0
+    3: 12.0
+    4: 14.0
+    5: 15.0
+  2. External hazards affecting aerodrome:
+    1: 1.0
+    2: 9.0
+    3: 12.0
+    4: 20.0
+    5: 25.0
+  3. Aeronautical objects affecting aerodrome:
+    1: 1.0
+    2: 9.0
+    3: 12.0
+    4: 16.0
+    5: 17.5
+  4. Terrain and vegetation:
+    1: 1.0
+    2: 10.0
+    3: 15.0
+    4: 20.0
+    5: 25.0
+  5. Common meteorological phenomena:
+    1: 10.0
+    2: 18.0
+    3: 27.0
+    4: 36.0
+    5: 45.0
+  6. Aerodrome layout:
+    1: 1.0
+    2: 9.0
+    3: 12.0
+    4: 0.8
+    5: 20.0
+  7. Runway configuration:
+    1: 10.0
+    2: 20.0
+    3: 27.0
+    4: 32.0
+    5: 35.0
+  8. Aerodrome traffic circuit:
+    1: 10.0
+    2: 18.0
+    3: 27.0
+    4: 32.0
+    5: 40.0
+  9. Airspace and procedures:
+    1: 14.0
+    2: 24.0
+    3: 33.0
+    4: 40.0
+    5: 50.0
+  10. Common aircraft speed differential:
+    1: 10.0
+    2: 18.0
+    3: 27.0
+    4: 36.0
+    5: 45.0
+  11. Regular diverse operation types:
+    1: 20.0
+    2: 36.0
+    3: 48.0
+    4: 56.0
+    5: 60.0
+  12. Presence of other aircraft- traffic volume:
+    1: 20.0
+    2: 36.0
+    3: 48.0
+    4: 56.0
+    5: 60.0
+  13. Presence of other aircraft- traffic peaks:
+    1: 20.0
+    2: 36.0
+    3: 48.0
+    4: 56.0
+    5: 60.0
+AFIS-I:
+  1. Presence of animals or people on aerodrome:
+    1: 1.0
+    2: 9.0
+    3: 12.0
+    4: 16.0
+    5: 20.0
+  2. External hazards affecting aerodrome:
+    1: 1.0
+    2: 10.0
+    3: 13.5
+    4: 20.0
+    5: 25.0
+  3. Aeronautical objects affecting aerodrome:
+    1: 1.0
+    2: 9.0
+    3: 12.0
+    4: 16.0
+    5: 20.0
+  4. Terrain and vegetation:
+    1: 1.0
+    2: 10.0
+    3: 15.0
+    4: 20.0
+    5: 25.0
+  5. Common meteorological phenomena:
+    1: 10.0
+    2: 18.0
+    3: 27.0
+    4: 36.0
+    5: 45.0
+  6. Aerodrome layout:
+    1: 1.0
+    2: 9.0
+    3: 12.0
+    4: 0.8
+    5: 20.0
+  7. Runway configuration:
+    1: 10.0
+    2: 20.0
+    3: 27.0
+    4: 32.0
+    5: 40.0
+  8. Aerodrome traffic circuit:
+    1: 10.0
+    2: 20.0
+    3: 27.0
+    4: 32.0
+    5: 40.0
+  9. Airspace and procedures:
+    1: 11.0
+    2: 20.0
+    3: 30.0
+    4: 40.0
+    5: 50.0
+  10. Common aircraft speed differential:
+    1: 10.0
+    2: 20.0
+    3: 30.0
+    4: 40.0
+    5: 50.0
+  11. Regular diverse operation types:
+    1: 20.0
+    2: 40.0
+    3: 54.0
+    4: 72.0
+    5: 90.0
+  12. Presence of other aircraft- traffic volume:
+    1: 20.0
+    2: 40.0
+    3: 54.0
+    4: 64.0
+    5: 70.0
+  13. Presence of other aircraft- traffic peaks:
+    1: 20.0
+    2: 40.0
+    3: 54.0
+    4: 64.0
+    5: 70.0
+AFIS-V:
+  1. Presence of animals or people on aerodrome:
+    1: 1.0
+    2: 9.0
+    3: 12.0
+    4: 16.0
+    5: 20.0
+  2. External hazards affecting aerodrome:
+    1: 1.0
+    2: 10.0
+    3: 13.5
+    4: 20.0
+    5: 25.0
+  3. Aeronautical objects affecting aerodrome:
+    1: 1.0
+    2: 9.0
+    3: 12.0
+    4: 16.0
+    5: 20.0
+  4. Terrain and vegetation:
+    1: 1.0
+    2: 10.0
+    3: 15.0
+    4: 20.0
+    5: 25.0
+  5. Common meteorological phenomena:
+    1: 10.0
+    2: 18.0
+    3: 27.0
+    4: 36.0
+    5: 45.0
+  6. Aerodrome layout:
+    1: 1.0
+    2: 9.0
+    3: 12.0
+    4: 0.8
+    5: 20.0
+  7. Runway configuration:
+    1: 10.0
+    2: 20.0
+    3: 27.0
+    4: 32.0
+    5: 40.0
+  8. Aerodrome traffic circuit:
+    1: 10.0
+    2: 20.0
+    3: 27.0
+    4: 32.0
+    5: 40.0
+  9. Airspace and procedures:
+    1: 11.0
+    2: 20.0
+    3: 30.0
+    4: 40.0
+    5: 50.0
+  10. Common aircraft speed differential:
+    1: 10.0
+    2: 20.0
+    3: 30.0
+    4: 40.0
+    5: 50.0
+  11. Regular diverse operation types:
+    1: 20.0
+    2: 40.0
+    3: 54.0
+    4: 72.0
+    5: 90.0
+  12. Presence of other aircraft- traffic volume:
+    1: 20.0
+    2: 40.0
+    3: 54.0
+    4: 64.0
+    5: 70.0
+  13. Presence of other aircraft- traffic peaks:
+    1: 20.0
+    2: 40.0
+    3: 54.0
+    4: 64.0
+    5: 70.0
+UNICOM-I:
+  1. Presence of animals or people on aerodrome:
+    1: 1.0
+    2: 9.0
+    3: 13.5
+    4: 18.0
+    5: 22.5
+  2. External hazards affecting aerodrome:
+    1: 1.0
+    2: 10.0
+    3: 13.5
+    4: 20.0
+    5: 25.0
+  3. Aeronautical objects affecting aerodrome:
+    1: 1.0
+    2: 10.0
+    3: 13.5
+    4: 18.0
+    5: 22.5
+  4. Terrain and vegetation:
+    1: 1.0
+    2: 10.0
+    3: 15.0
+    4: 20.0
+    5: 25.0
+  5. Common meteorological phenomena:
+    1: 10.0
+    2: 18.0
+    3: 27.0
+    4: 36.0
+    5: 45.0
+  6. Aerodrome layout:
+    1: 1.0
+    2: 10.0
+    3: 15.0
+    4: 1.0
+    5: 25.0
+  7. Runway configuration:
+    1: 10.0
+    2: 20.0
+    3: 30.0
+    4: 36.0
+    5: 45.0
+  8. Aerodrome traffic circuit:
+    1: 10.0
+    2: 20.0
+    3: 30.0
+    4: 36.0
+    5: 45.0
+  9. Airspace and procedures:
+    1: 11.0
+    2: 20.0
+    3: 30.0
+    4: 40.0
+    5: 50.0
+  10. Common aircraft speed differential:
+    1: 10.0
+    2: 20.0
+    3: 30.0
+    4: 40.0
+    5: 50.0
+  11. Regular diverse operation types:
+    1: 20.0
+    2: 36.0
+    3: 54.0
+    4: 72.0
+    5: 90.0
+  12. Presence of other aircraft- traffic volume:
+    1: 20.0
+    2: 40.0
+    3: 60.0
+    4: 80.0
+    5: 100.0
+  13. Presence of other aircraft- traffic peaks:
+    1: 20.0
+    2: 40.0
+    3: 60.0
+    4: 80.0
+    5: 100.0
+UNICOM-V:
+  1. Presence of animals or people on aerodrome:
+    1: 1.0
+    2: 9.0
+    3: 13.5
+    4: 18.0
+    5: 22.5
+  2. External hazards affecting aerodrome:
+    1: 1.0
+    2: 9.0
+    3: 13.5
+    4: 20.0
+    5: 25.0
+  3. Aeronautical objects affecting aerodrome:
+    1: 1.0
+    2: 10.0
+    3: 13.5
+    4: 18.0
+    5: 22.5
+  4. Terrain and vegetation:
+    1: 1.0
+    2: 10.0
+    3: 15.0
+    4: 20.0
+    5: 25.0
+  5. Common meteorological phenomena:
+    1: 10.0
+    2: 18.0
+    3: 27.0
+    4: 36.0
+    5: 45.0
+  6. Aerodrome layout:
+    1: 1.0
+    2: 10.0
+    3: 15.0
+    4: 1.0
+    5: 25.0
+  7. Runway configuration:
+    1: 10.0
+    2: 20.0
+    3: 30.0
+    4: 36.0
+    5: 45.0
+  8. Aerodrome traffic circuit:
+    1: 10.0
+    2: 20.0
+    3: 30.0
+    4: 36.0
+    5: 45.0
+  9. Airspace and procedures:
+    1: 11.0
+    2: 20.0
+    3: 30.0
+    4: 40.0
+    5: 50.0
+  10. Common aircraft speed differential:
+    1: 10.0
+    2: 20.0
+    3: 30.0
+    4: 40.0
+    5: 50.0
+  11. Regular diverse operation types:
+    1: 20.0
+    2: 36.0
+    3: 54.0
+    4: 72.0
+    5: 90.0
+  12. Presence of other aircraft- traffic volume:
+    1: 20.0
+    2: 40.0
+    3: 60.0
+    4: 80.0
+    5: 100.0
+  13. Presence of other aircraft- traffic peaks:
+    1: 20.0
+    2: 40.0
+    3: 60.0
+    4: 80.0
+    5: 100.0
+VFR:
+  1. Presence of animals or people on aerodrome:
+    1: 1.0
+    2: 10.0
+    3: 15.0
+    4: 20.0
+    5: 25.0
+  2. External hazards affecting aerodrome:
+    1: 1.0
+    2: 10.0
+    3: 15.0
+    4: 20.0
+    5: 25.0
+  3. Aeronautical objects affecting aerodrome:
+    1: 1.0
+    2: 10.0
+    3: 15.0
+    4: 20.0
+    5: 25.0
+  4. Terrain and vegetation:
+    1: 1.0
+    2: 10.0
+    3: 15.0
+    4: 20.0
+    5: 25.0
+  5. Common meteorological phenomena:
+    1: 10.0
+    2: 20.0
+    3: 30.0
+    4: 40.0
+    5: 50.0
+  6. Aerodrome layout:
+    1: 1.0
+    2: 10.0
+    3: 15.0
+    4: 1.0
+    5: 25.0
+  7. Runway configuration:
+    1: 10.0
+    2: 20.0
+    3: 30.0
+    4: 40.0
+    5: 50.0
+  8. Aerodrome traffic circuit:
+    1: 10.0
+    2: 20.0
+    3: 30.0
+    4: 40.0
+    5: 50.0
+  9. Airspace and procedures:
+    1: 10.0
+    2: 20.0
+    3: 30.0
+    4: 40.0
+    5: 50.0
+  10. Common aircraft speed differential:
+    1: 10.0
+    2: 20.0
+    3: 30.0
+    4: 40.0
+    5: 50.0
+  11. Regular diverse operation types:
+    1: 20.0
+    2: 40.0
+    3: 60.0
+    4: 80.0
+    5: 100.0
+  12. Presence of other aircraft- traffic volume:
+    1: 20.0
+    2: 40.0
+    3: 60.0
+    4: 80.0
+    5: 100.0
+  13. Presence of other aircraft- traffic peaks:
+    1: 20.0
+    2: 40.0
+    3: 60.0
+    4: 80.0
+    5: 100.0
