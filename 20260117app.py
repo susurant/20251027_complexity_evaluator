@@ -1,131 +1,27 @@
 import streamlit as st
 import yaml
-import streamlit.components.v1 as components
 
 # --- Page setup ---
 st.set_page_config(page_title="Aerodrome Risk Assessment", layout="wide")
 
-#st.markdown("""
-## Aerodrome Risk Assessment Indicator
-#Select the most appropriate condition for each category. 
-#Your total risk score and level will update dynamically.
-#""")
-
-import base64
-
-# Read local image and encode
-with open("MHA_Logo_PNG.png", "rb") as f:
-    img_bytes = f.read()
-encoded = base64.b64encode(img_bytes).decode()
-
-import streamlit as st
-
-# Hide Streamlit default menu, footer, and deploy banner
-st.set_page_config(
-    page_title="ARAI Dashboard",
-    page_icon="🛩️",
-    layout="wide",
-    initial_sidebar_state="expanded"
-)
-
-hide_streamlit_style = """
-<style>
-/* Hide Streamlit footer and "Made with Streamlit" banner */
-footer {visibility: hidden;}
-header {visibility: hidden;}
-</style>
-"""
-st.markdown(hide_streamlit_style, unsafe_allow_html=True)
-
-
-st.markdown(f"""
-<style>
-/* Fixed top banner */
-.hero {{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 160px;  /* fixed height */
-    z-index: 9999;
-    display: flex;
-    align-items: center;
-    padding-left: clamp(16px, 4vw, 56px);
-    background-image:
-        linear-gradient(
-            to right,
-            rgba(245,246,248,1) 0%,
-            rgba(245,246,248,0.95) 40%,
-            rgba(245,246,248,0.6) 55%,
-            rgba(245,246,248,0.0) 70%
-        ),
-        url("data:image/png;base64,{encoded}");
-    background-size: auto 85%;
-    background-repeat: no-repeat;
-    background-position: right center;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}}
-
-/* Ensure hero text flows normally */
-.hero-content {{
-    max-width: 60%;
-}}
-
-.hero h1 {{
-    margin: 0;
-    font-size: clamp(2rem, 3vw, 2.5rem);
-    font-weight: 800;
-    color: #111;
-}}
-
-.hero p {{
-    margin: 4px 0 0 0;
-    color: #333;
-    font-size: 1rem;
-}}
-
-/* Push main content down so it isn’t hidden behind hero */
-.main-content {{
-    padding-top: 30px;  /* same as hero height */
-}}
-</style>
-
-<div class="hero">
-    <div class="hero-content">
-        <h1>Aerodrome Risk Assessment Indicator</h1>
-        <p>Select the most appropriate condition for each category.</p>
-    </div>
-</div>
-
-<div class="main-content">
-</div>
-""", unsafe_allow_html=True)
-
-
-
-
-
+st.markdown("""
+# Aerodrome Risk Assessment Tool
+Select the most appropriate condition for each category. 
+Your total risk score and level will update dynamically.
+""")
 
 # Create multiple tabs
-tab1,tab2 = st.tabs(["Main Inputs", "Scores"])
-
-# Load YAML list
-with open("airports.yaml", "r") as f:
-    airports = yaml.safe_load(f)  # airports is a Python list
-
+tab1, tab2 = st.tabs(["Main Inputs", "Scores"])
 
 with tab1:
-    #st.write("This is your main input tab.")
+    st.write("This is your main input tab.")
     # You can put other inputs or charts here
 
     # 1️⃣ String input (placed above)
-    #user_name = st.text_input(
-    #    "",
-    #    placeholder="Enter name..."
-    #)
-    
-    # Dropdown
-    user_name = st.selectbox("Select Airport", airports)
+    user_name = st.text_input(
+        "",
+        placeholder="Enter name..."
+    )
 
     # 2️⃣ Two numeric inputs side by side
     col1, col2 = st.columns(2)
@@ -133,31 +29,25 @@ with tab1:
     with col1:
         ifr_value = st.number_input(
             "Annual IFR movements",
-            min_value=0,
-            value=10000,
-            step=100,
-            format="%d",
+            min_value=0.0,
+            value=10000.0,
+            step=100.0,
+            format="%.2f",
             help="Numeric value used to calculate IFR proportion"
         )
 
     with col2:
         vfr_value = st.number_input(
             "Annual VFR movements",
-            min_value=0,
-            value=20000,
-            step=100,
-            format="%d",
+            min_value=0.0,
+            value=20000.0,
+            step=100.0,
+            format="%.2f",
             help="Numeric value used to calculate VFR proportion"
         )
 
-    # --- Radio buttons to choose ---
-    selected = st.radio(
-        "Select Aerodrome Type:",
-        ['Unattended','ATC','AFIS','UNICOM/AWIB'],
-        horizontal=True
-    )
     st.markdown("""
-    ## Complexity indicators (leading to pilot workload)				
+    # Complexity indicators (leading to pilot workload)				
     """)
 
     # --- Custom CSS ---
@@ -502,58 +392,70 @@ with tab1:
     # --- Optional: Weighted Aerodrome Index ---
     aero_data = result
 
+    # --- Radio buttons to choose ---
+    selected = st.radio(
+        "Select Aerodrome Type:",
+        list(aero_data.keys()),
+        horizontal=True
+    )
+
     # --- Custom HTML Table (styled like your image) ---
     highlight_color = "#d1e7dd"  # light green highlight
     html_table = f"""
-<style>
-.custom-table {{
-    border-collapse: collapse;
-    width: 100%;
-    margin-top: 10px;
-    text-align: center;
-    font-family: Arial, sans-serif;
-}}
-.custom-table th {{
-    border: 2px solid black;
-    padding: 8px;
-    background-color: #f8f9fa;
-    font-weight: bold;
-    color: black;
-}}
-.custom-table td {{
-    border: 2px solid black;
-    padding: 10px;
-    font-size: 16px;
-    color: black;
-}}
-.index-col {{
-    font-weight: bold;
-    border: 2px solid black;
-    background-color: #f8f9fa;
-    text-align: left;
-    padding-left: 10px;
-}}
-.highlight {{
-    background-color: #d1e7dd;
-    font-weight: bold;
-}}
-</style>
+    <style>
+    .custom-table {{
+        border-collapse: collapse;
+        width: 100%;
+        margin-top: 10px;
+        text-align: center;
+        font-family: Arial, sans-serif;
+    }}
+    .custom-table th {{
+        border: 2px solid black;
+        padding: 8px;
+        background-color: #f8f9fa;
+        font-weight: bold;
+        color: black;  /* ensures header text is black */
+    }}
+    .custom-table td {{
+        border: 2px solid black;
+        padding: 10px;
+        font-size: 16px;
+        color: black;  /* ensures header text is black */
+    }}
+    .highlight {{
+        background-color: {highlight_color};
+        font-weight: bold;
+        color: black;  /* ensures header text is black */
 
-<table class="custom-table">
-    <tr>
-        <th></th>
-        <th>{selected}</th>
-    </tr>
-    <tr>
-        <td class="index-col">
-            Weighted Normalised<br>Aerodrome Index
-        </td>
-        <td class="highlight">
-            {aero_data[selected]}
-        </td>
-    </tr>
-</table>
-"""
+    }}
+    .index-col {{
+        font-weight: bold;
+        border: 2px solid black;
+        background-color: #f8f9fa;
+        text-align: left;
+        padding-left: 10px;
+        color: black;  /* ensures header text is black */
+    }}
+    </style>
+
+    <table class="custom-table">
+        <tr>
+            <th></th>
+            <th>Unattended</th>
+            <th>UNICOM/AWIB</th>
+            <th>AFIS</th>
+            <th>ATC</th>
+        </tr>
+        <tr>
+            <td class="index-col">Weighted Normalised<br>Aerodrome Index</td>
+            <td class="{ 'highlight' if selected == 'Unattended' else '' }">{aero_data['Unattended']}</td>
+            <td class="{ 'highlight' if selected == 'ATC' else '' }">{aero_data['ATC']}</td>
+            <td class="{ 'highlight' if selected == 'AFIS' else '' }">{aero_data['AFIS']}</td>
+            <td class="{ 'highlight' if selected == 'UNICOM/AWIB' else '' }">{aero_data['UNICOM/AWIB']}</td>
+        </tr>
+    </table>
+    """
 
     st.markdown(html_table, unsafe_allow_html=True)
 
@@ -602,28 +504,88 @@ with tab1:
         file_name=f"aerodrome_assessment_{user_name or 'entry'}.xlsx",
         mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
     )
+with tab2:
 
-# --- Footer ---
-st.markdown(
-    """
-    <style>
-    .footer {
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        background-color: #f4f6f8;
-        color: #333333;
-        text-align: center;
-        padding: 10px 0;
-        font-size: 12px;
-        border-top: 1px solid #e0e0e0;
+    ifr = ifr_totals
+    vfr = vfr_totals
+    # Map section names to sheet prefixes
+    section_to_prefix = {
+        "With ATC": "ATC",
+        "With AFIS": "AFIS",
+        "With UNICOM": "UNICOM",
     }
-    </style>
 
-    <div class="footer">
-    No part of this application may be used, reproduced and/or disclosed in any form or by any means without the prior written permission of the Mike Haines Aviation Limited.© 2026 – All rights reserved
-    </div>
-    """,
-    unsafe_allow_html=True
-)
+    sections = {
+        "AERODROME INDEX": ["IFR", "VFR"],
+        "No ATS": ["IFR Score", "VFR Score", "Weighted Score"],
+        "With ATC": ["IFR Score", "VFR Score", "Weighted Score"],
+        "With AFIS": ["IFR Score", "VFR Score", "Weighted Score"],
+        "With UNICOM": ["IFR Score", "VFR Score", "Weighted Score"],
+    }
+
+    def get_raw_score(section, row):
+        if section == "AERODROME INDEX":
+            if row == "IFR":
+                return f"{round(float(ifr_ratio) * 100, 0)}%"
+            if row == "VFR":
+                return f"{round(float(vfr_ratio) * 100, 0)}%"
+
+        if section == "No ATS":
+            if row == "IFR Score":
+                return ifr_totals.get("IFR", "")
+            elif row == "VFR Score":
+                return vfr_totals.get("VFR", "")
+            elif row == "Weighted Score":
+                i_val = ifr_totals.get("IFR", "")
+                v_val = vfr_totals.get("VFR", "")
+                return int(Decimal((i_val * ifr_ratio) + (v_val * vfr_ratio)).quantize(Decimal('1'), rounding=ROUND_HALF_UP))
+            else:
+                return ""
+
+        # For With ATC, With AFIS, With UNICOM
+        prefix = section_to_prefix.get(section)
+        if not prefix:
+            return ""
+
+        if row == "IFR Score":
+            return ifr_totals.get(f"{prefix}-I", "")
+        elif row == "VFR Score":
+            return vfr_totals.get(f"{prefix}-V", "")
+        elif row == "Weighted Score":
+            i_val = ifr_totals.get(f"{prefix}-I")
+            v_val = vfr_totals.get(f"{prefix}-V")
+            if i_val is not None and v_val is not None:
+                return int(Decimal((i_val * ifr_ratio) + (v_val * vfr_ratio)).quantize(Decimal('1'), rounding=ROUND_HALF_UP))
+            else:
+                return ""
+        else:
+            return ""
+
+
+    # ---- Build DataFrame ----
+    rows = []
+    raw_vals = []
+
+    for section, row_names in sections.items():
+        rows.append(section)  # Section header
+        raw_vals.append("")
+        for row in row_names:
+            rows.append(row)
+            raw_vals.append(get_raw_score(section, row))
+
+    df = pd.DataFrame({"Raw": raw_vals}, index=rows)
+
+    # ---- Normalised column ----
+    def normalise(value):
+        try:
+            return int(Decimal(float(value) * 0.145).quantize(Decimal('1'), rounding=ROUND_HALF_UP)) #round(float(value) * 0.145, 2)
+        except (ValueError, TypeError):
+            return ""
+
+    df["Normalised"] = df["Raw"].apply(normalise)
+
+
+    # Streamlit display
+    #st.set_page_config(page_title="Aerodrome Scores Table", layout="centered")
+    st.title("✈️ Aerodrome Scoring Table")
+    st.table(df)

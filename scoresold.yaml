@@ -1,0 +1,97 @@
+1. Presence of animals or people on aerodrome:
+  Rare: 1
+  Common bird hazard: 2
+  Livestock, dogs, etc present at times: 3
+  People frequently on the manoeuvring area: 4
+  Vehicles frequently on the manoeuvring area: 5
+
+2. External hazards affecting aerodrome:
+  Rare: 1
+  Search lights or lasers common: 2
+  Pyrotechnics or permanent jet efflux: 3
+  Structures: 4
+  Wires: 5
+
+3. Aeronautical objects affecting aerodrome:
+  Rare, small balloons (<1m3): 1
+  Parasaails or gyrogliders: 2
+  Rocket activity: 3
+  Kites or tethered balloons: 4
+  Model aircraft or pilotless aircraft: 5
+
+4. Terrain and vegetation:
+  Terrain relatively unobstructed and flat: 1
+  Adjacent terrain flat but affects aerodrome: 2
+  High altitude aerodrome affects performance: 3
+  Terrain or trees affect approaches: 4
+  Terrain or trees affect circuits or runway: 5
+
+5. Common meteorological phenomena:
+  Rarely adverse: 1
+  Fog or low cloud common: 2
+  Common poor visibility: 3
+  Moderate turbulence or crosswind common: 4
+  Thunderstorms or windshear common: 5
+
+6. Aerodrome layout:
+  Simple layout: 1
+  Rail, marine, road conflict: 2
+  Construction or maintenance works common: 3
+  Few or no approach and landing aids: 4
+  Taxiing across or along runways common: 5
+
+7. Runway configuration:
+  Single runway: 1
+  Parallel separated runways: 2
+  Parallel runways (not separated): 3
+  Crossing runways (2 runways): 4
+  Crossing runways (3 or more): 5
+
+8. Aerodrome traffic circuit:
+  Single circuit: 1
+  Integrated circuits (same direction): 2
+  Opposite direction circuits or noise abatement: 3
+  Conflicting circuits: 4
+  Conflicting abnormal circuit ops or adjacent aerodrome: 5
+
+9. Airspace and procedures:
+  Uncontrolled airspace: 1
+  Airspace requiring radio use: 2
+  Airspace with specified flight procedures: 3
+  Special use airspace affecting circuit: 4
+  Airspace requiring multiple frequencies: 5
+
+10. Common aircraft speed differential:
+  "<30kt (C172-C206)": 1
+  "30-49kt (C172-PA34)": 2
+  "50-69kt (C172-BE1900D)": 3
+  "70-89kt (C172-B737)": 4
+  "≥90kt (C172-B747)": 5
+
+11. Regular diverse operation types:
+  Military aircraft: 1
+  Microlight aircraft / hang gliders / helicopters: 2
+  Training aircraft or two other types: 3
+  Gliding or three other diverse types: 4
+  Parachuting or four other diverse types: 5
+
+12. Presence of other aircraft- traffic volume:
+  Light (<20,000 annual): 1
+  Low (20,000-39,999): 2
+  Moderate (40,000-59,999): 3
+  High (60,000-79,999): 4
+  Very high (80,000+): 5
+
+13. Presence of other aircraft- traffic peaks:
+  Daily peaks 5-9 per hour: 1
+  Daily peaks 10-19 per hour: 2
+  Daily peaks 20-29 per hour: 3
+  Daily peaks 30-39 per hour: 4
+  Daily peaks 40+ per hour: 5
+
+14. Wake Turbulence:
+  One: 1
+  Two: 2
+  Three: 3
+  Four: 4
+  Five: 5

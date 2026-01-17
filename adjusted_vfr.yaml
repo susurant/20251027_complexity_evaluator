@@ -1,101 +1,5 @@
 ATC-I:
-  1. Presence of animals or people on aerodrome:
-    1:
-      value: 1
-      percentage: 0
-    2:
-      value: 9
-      percentage: -10
-    3:
-      value: 12
-      percentage: -20
-    4:
-      value: 14
-      percentage: -30
-    5:
-      value: 15
-      percentage: -40
-  2. External hazards affecting aerodrome:
-    1:
-      value: 1
-      percentage: 0
-    2:
-      value: 9
-      percentage: -10
-    3:
-      value: 12
-      percentage: -20
-    4:
-      value: 20
-      percentage: 0
-    5:
-      value: 25
-      percentage: 0
-  3. Aeronautical objects affecting aerodrome:
-    1:
-      value: 1
-      percentage: 0
-    2:
-      value: 9
-      percentage: -10
-    3:
-      value: 12
-      percentage: -20
-    4:
-      value: 16
-      percentage: -20
-    5:
-      value: 18
-      percentage: -30
-  4. Terrain and vegetation:
-    1:
-      value: 1
-      percentage: 0
-    2:
-      value: 10
-      percentage: 0
-    3:
-      value: 15
-      percentage: 0
-    4:
-      value: 20
-      percentage: 0
-    5:
-      value: 25
-      percentage: 0
-  5. Common meteorological phenomena:
-    1:
-      value: 10
-      percentage: 0
-    2:
-      value: 18
-      percentage: -10
-    3:
-      value: 27
-      percentage: -10
-    4:
-      value: 36
-      percentage: -10
-    5:
-      value: 45
-      percentage: -10
-  6. Aerodrome layout:
-    1:
-      value: 1
-      percentage: 0
-    2:
-      value: 9
-      percentage: -10
-    3:
-      value: 12
-      percentage: -20
-    4:
-      value: 1
-      percentage: -20
-    5:
-      value: 20
-      percentage: -20
-  7. Runway configuration:
+  1. Runway configuration:
     1:
       value: 10
       percentage: 0
@@ -111,7 +15,55 @@ ATC-I:
     5:
       value: 35
       percentage: -30
-  8. Aerodrome traffic circuit:
+  2. Runway Type:
+    1:
+      value: 10
+      percentage: 0
+    2:
+      value: 20
+      percentage: 0
+    3:
+      value: 27
+      percentage: -10
+    4:
+      value: 32
+      percentage: -20
+    5:
+      value: 35
+      percentage: -30
+  3. Taxiways:
+    1:
+      value: 10
+      percentage: 0
+    2:
+      value: 20
+      percentage: 0
+    3:
+      value: 27
+      percentage: -10
+    4:
+      value: 32
+      percentage: -20
+    5:
+      value: 35
+      percentage: -30
+  4. Navigation Aids:
+    1:
+      value: 10
+      percentage: 0
+    2:
+      value: 20
+      percentage: 0
+    3:
+      value: 27
+      percentage: -10
+    4:
+      value: 32
+      percentage: -20
+    5:
+      value: 35
+      percentage: -30
+  5. Aerodrome traffic circuit:
     1:
       value: 10
       percentage: 0
@@ -127,9 +79,9 @@ ATC-I:
     5:
       value: 40
       percentage: -20
-  9. Airspace and procedures:
+  6. Airspace and procedures:
     1:
-      value: 12
+      value: 60
       percentage: 20
     2:
       value: 22
@@ -141,9 +93,105 @@ ATC-I:
       value: 40
       percentage: 0
     5:
-      value: 50
+      value: 40
       percentage: 0
-  10. Common aircraft speed differential:
+  7. Traffic Mix:
+    1:
+      value: 20
+      percentage: 0
+    2:
+      value: 36
+      percentage: -10
+    3:
+      value: 48
+      percentage: -20
+    4:
+      value: 56
+      percentage: -30
+    5:
+      value: 60
+      percentage: -40
+  8. Night Operations:
+    1:
+      value: 20
+      percentage: 0
+    2:
+      value: 36
+      percentage: -10
+    3:
+      value: 48
+      percentage: -20
+    4:
+      value: 56
+      percentage: -30
+    5:
+      value: 60
+      percentage: -40
+  9. IFR/VFR:
+    1:
+      value: 20
+      percentage: 0
+    2:
+      value: 36
+      percentage: -10
+    3:
+      value: 48
+      percentage: -20
+    4:
+      value: 56
+      percentage: -30
+    5:
+      value: 60
+      percentage: -40
+  10. Helicopter Operations:
+    1:
+      value: 20
+      percentage: 0
+    2:
+      value: 36
+      percentage: -10
+    3:
+      value: 48
+      percentage: -20
+    4:
+      value: 56
+      percentage: -30
+    5:
+      value: 60
+      percentage: -40
+  11. Traffic volume:
+    1:
+      value: 20
+      percentage: 0
+    2:
+      value: 36
+      percentage: -10
+    3:
+      value: 48
+      percentage: -20
+    4:
+      value: 56
+      percentage: -30
+    5:
+      value: 60
+      percentage: -40
+  12. Traffic peaks:
+    1:
+      value: 20
+      percentage: 0
+    2:
+      value: 36
+      percentage: -10
+    3:
+      value: 48
+      percentage: -20
+    4:
+      value: 56
+      percentage: -30
+    5:
+      value: 60
+      percentage: -40
+  13. Common aircraft speed differential:
     1:
       value: 10
       percentage: 0
@@ -159,56 +207,7 @@ ATC-I:
     5:
       value: 45
       percentage: -10
-  11. Regular diverse operation types:
-    1:
-      value: 20
-      percentage: 0
-    2:
-      value: 36
-      percentage: -10
-    3:
-      value: 48
-      percentage: -20
-    4:
-      value: 56
-      percentage: -30
-    5:
-      value: 60
-      percentage: -40
-  12. Presence of other aircraft- traffic volume:
-    1:
-      value: 20
-      percentage: 0
-    2:
-      value: 36
-      percentage: -10
-    3:
-      value: 48
-      percentage: -20
-    4:
-      value: 56
-      percentage: -30
-    5:
-      value: 60
-      percentage: -40
-  13. Presence of other aircraft- traffic peaks:
-    1:
-      value: 20
-      percentage: 0
-    2:
-      value: 36
-      percentage: -10
-    3:
-      value: 48
-      percentage: -20
-    4:
-      value: 56
-      percentage: -30
-    5:
-      value: 60
-      percentage: -40
-ATC-V:
-  1. Presence of animals or people on aerodrome:
+  14. Wake Turbulence:
     1:
       value: 1
       percentage: 0
@@ -224,7 +223,23 @@ ATC-V:
     5:
       value: 15
       percentage: -40
-  2. External hazards affecting aerodrome:
+  15. Wildlife Hazard:
+    1:
+      value: 1
+      percentage: 0
+    2:
+      value: 9
+      percentage: -10
+    3:
+      value: 12
+      percentage: -20
+    4:
+      value: 14
+      percentage: -30
+    5:
+      value: 15
+      percentage: -40
+  16. External hazards affecting aerodrome:
     1:
       value: 1
       percentage: 0
@@ -240,7 +255,7 @@ ATC-V:
     5:
       value: 25
       percentage: 0
-  3. Aeronautical objects affecting aerodrome:
+  17. Aeronautical activities affecting aerodrome:
     1:
       value: 1
       percentage: 0
@@ -256,7 +271,7 @@ ATC-V:
     5:
       value: 18
       percentage: -30
-  4. Terrain and vegetation:
+  18. Terrain and vegetation:
     1:
       value: 1
       percentage: 0
@@ -272,23 +287,23 @@ ATC-V:
     5:
       value: 25
       percentage: 0
-  5. Common meteorological phenomena:
+  19. Common meteorological phenomena:
     1:
-      value: 10
+      value: 1
       percentage: 0
     2:
-      value: 18
+      value: 9
       percentage: -10
     3:
-      value: 27
+      value: 14
       percentage: -10
     4:
-      value: 36
+      value: 18
       percentage: -10
     5:
-      value: 45
+      value: 22
       percentage: -10
-  6. Aerodrome layout:
+  20. Circuit Entry Points:
     1:
       value: 1
       percentage: 0
@@ -299,12 +314,13 @@ ATC-V:
       value: 12
       percentage: -20
     4:
-      value: 1
+      value: 16
       percentage: -20
     5:
       value: 20
       percentage: -20
-  7. Runway configuration:
+ATC-V:
+  1. Runway configuration:
     1:
       value: 10
       percentage: 0
@@ -320,7 +336,55 @@ ATC-V:
     5:
       value: 35
       percentage: -30
-  8. Aerodrome traffic circuit:
+  2. Runway Type:
+    1:
+      value: 10
+      percentage: 0
+    2:
+      value: 20
+      percentage: 0
+    3:
+      value: 27
+      percentage: -10
+    4:
+      value: 32
+      percentage: -20
+    5:
+      value: 35
+      percentage: -30
+  3. Taxiways:
+    1:
+      value: 10
+      percentage: 0
+    2:
+      value: 20
+      percentage: 0
+    3:
+      value: 27
+      percentage: -10
+    4:
+      value: 32
+      percentage: -20
+    5:
+      value: 35
+      percentage: -30
+  4. Navigation Aids:
+    1:
+      value: 10
+      percentage: 0
+    2:
+      value: 20
+      percentage: 0
+    3:
+      value: 27
+      percentage: -10
+    4:
+      value: 32
+      percentage: -20
+    5:
+      value: 35
+      percentage: -30
+  5. Aerodrome traffic circuit:
     1:
       value: 10
       percentage: 0
@@ -336,23 +400,119 @@ ATC-V:
     5:
       value: 40
       percentage: -20
-  9. Airspace and procedures:
+  6. Airspace and procedures:
     1:
-      value: 14
-      percentage: 40
-    2:
-      value: 24
+      value: 60
       percentage: 20
-    3:
-      value: 33
+    2:
+      value: 22
       percentage: 10
+    3:
+      value: 32
+      percentage: 5
     4:
       value: 40
       percentage: 0
     5:
-      value: 50
+      value: 40
       percentage: 0
-  10. Common aircraft speed differential:
+  7. Traffic Mix:
+    1:
+      value: 20
+      percentage: 0
+    2:
+      value: 36
+      percentage: -10
+    3:
+      value: 48
+      percentage: -20
+    4:
+      value: 56
+      percentage: -30
+    5:
+      value: 60
+      percentage: -40
+  8. Night Operations:
+    1:
+      value: 20
+      percentage: 0
+    2:
+      value: 36
+      percentage: -10
+    3:
+      value: 48
+      percentage: -20
+    4:
+      value: 56
+      percentage: -30
+    5:
+      value: 60
+      percentage: -40
+  9. IFR/VFR:
+    1:
+      value: 20
+      percentage: 0
+    2:
+      value: 36
+      percentage: -10
+    3:
+      value: 48
+      percentage: -20
+    4:
+      value: 56
+      percentage: -30
+    5:
+      value: 60
+      percentage: -40
+  10. Helicopter Operations:
+    1:
+      value: 20
+      percentage: 0
+    2:
+      value: 36
+      percentage: -10
+    3:
+      value: 48
+      percentage: -20
+    4:
+      value: 56
+      percentage: -30
+    5:
+      value: 60
+      percentage: -40
+  11. Traffic volume:
+    1:
+      value: 20
+      percentage: 0
+    2:
+      value: 36
+      percentage: -10
+    3:
+      value: 48
+      percentage: -20
+    4:
+      value: 56
+      percentage: -30
+    5:
+      value: 60
+      percentage: -40
+  12. Traffic peaks:
+    1:
+      value: 20
+      percentage: 0
+    2:
+      value: 36
+      percentage: -10
+    3:
+      value: 48
+      percentage: -20
+    4:
+      value: 56
+      percentage: -30
+    5:
+      value: 60
+      percentage: -40
+  13. Common aircraft speed differential:
     1:
       value: 10
       percentage: 0
@@ -368,152 +528,120 @@ ATC-V:
     5:
       value: 45
       percentage: -10
-  11. Regular diverse operation types:
+  14. Wake Turbulence:
     1:
-      value: 20
+      value: 1
       percentage: 0
     2:
-      value: 36
+      value: 9
       percentage: -10
     3:
-      value: 48
+      value: 12
       percentage: -20
     4:
-      value: 56
+      value: 14
       percentage: -30
     5:
-      value: 60
+      value: 15
       percentage: -40
-  12. Presence of other aircraft- traffic volume:
+  15. Wildlife Hazard:
     1:
-      value: 20
+      value: 1
       percentage: 0
     2:
-      value: 36
+      value: 9
       percentage: -10
     3:
-      value: 48
+      value: 12
       percentage: -20
     4:
-      value: 56
+      value: 14
       percentage: -30
     5:
-      value: 60
+      value: 15
       percentage: -40
-  13. Presence of other aircraft- traffic peaks:
+  16. External hazards affecting aerodrome:
     1:
-      value: 20
+      value: 1
       percentage: 0
     2:
-      value: 36
+      value: 9
       percentage: -10
     3:
-      value: 48
+      value: 12
       percentage: -20
     4:
-      value: 56
-      percentage: -30
+      value: 20
+      percentage: 0
     5:
-      value: 60
-      percentage: -40
+      value: 25
+      percentage: 0
+  17. Aeronautical activities affecting aerodrome:
+    1:
+      value: 1
+      percentage: 0
+    2:
+      value: 9
+      percentage: -10
+    3:
+      value: 12
+      percentage: -20
+    4:
+      value: 16
+      percentage: -20
+    5:
+      value: 18
+      percentage: -30
+  18. Terrain and vegetation:
+    1:
+      value: 1
+      percentage: 0
+    2:
+      value: 10
+      percentage: 0
+    3:
+      value: 15
+      percentage: 0
+    4:
+      value: 20
+      percentage: 0
+    5:
+      value: 25
+      percentage: 0
+  19. Common meteorological phenomena:
+    1:
+      value: 1
+      percentage: 0
+    2:
+      value: 9
+      percentage: -10
+    3:
+      value: 14
+      percentage: -10
+    4:
+      value: 18
+      percentage: -10
+    5:
+      value: 22
+      percentage: -10
+  20. Circuit Entry Points:
+    1:
+      value: 1
+      percentage: 0
+    2:
+      value: 9
+      percentage: -10
+    3:
+      value: 12
+      percentage: -20
+    4:
+      value: 16
+      percentage: -20
+    5:
+      value: 20
+      percentage: -20
 AFIS-I:
-  1. Presence of animals or people on aerodrome:
-    1:
-      value: 1
-      percentage: 0
-    2:
-      value: 9
-      percentage: -10
-    3:
-      value: 12
-      percentage: -20
-    4:
-      value: 16
-      percentage: -20
-    5:
-      value: 20
-      percentage: -20
-  2. External hazards affecting aerodrome:
-    1:
-      value: 1
-      percentage: 0
-    2:
-      value: 10
-      percentage: 0
-    3:
-      value: 14
-      percentage: -10
-    4:
-      value: 20
-      percentage: 0
-    5:
-      value: 25
-      percentage: 0
-  3. Aeronautical objects affecting aerodrome:
-    1:
-      value: 1
-      percentage: 0
-    2:
-      value: 9
-      percentage: -10
-    3:
-      value: 12
-      percentage: -20
-    4:
-      value: 16
-      percentage: -20
-    5:
-      value: 20
-      percentage: -20
-  4. Terrain and vegetation:
-    1:
-      value: 1
-      percentage: 0
-    2:
-      value: 10
-      percentage: 0
-    3:
-      value: 15
-      percentage: 0
-    4:
-      value: 20
-      percentage: 0
-    5:
-      value: 25
-      percentage: 0
-  5. Common meteorological phenomena:
-    1:
-      value: 10
-      percentage: 0
-    2:
-      value: 18
-      percentage: -10
-    3:
-      value: 27
-      percentage: -10
-    4:
-      value: 36
-      percentage: -10
-    5:
-      value: 45
-      percentage: -10
-  6. Aerodrome layout:
-    1:
-      value: 1
-      percentage: 0
-    2:
-      value: 9
-      percentage: -10
-    3:
-      value: 12
-      percentage: -20
-    4:
-      value: 1
-      percentage: -20
-    5:
-      value: 20
-      percentage: -20
-  7. Runway configuration:
+  1. Runway configuration:
     1:
       value: 10
       percentage: 0
@@ -529,7 +657,7 @@ AFIS-I:
     5:
       value: 40
       percentage: -20
-  8. Aerodrome traffic circuit:
+  2. Runway Type:
     1:
       value: 10
       percentage: 0
@@ -545,9 +673,57 @@ AFIS-I:
     5:
       value: 40
       percentage: -20
-  9. Airspace and procedures:
+  3. Taxiways:
     1:
-      value: 11
+      value: 10
+      percentage: 0
+    2:
+      value: 20
+      percentage: 0
+    3:
+      value: 27
+      percentage: -10
+    4:
+      value: 32
+      percentage: -20
+    5:
+      value: 40
+      percentage: -20
+  4. Navigation Aids:
+    1:
+      value: 10
+      percentage: 0
+    2:
+      value: 20
+      percentage: 0
+    3:
+      value: 27
+      percentage: -10
+    4:
+      value: 32
+      percentage: -20
+    5:
+      value: 40
+      percentage: -20
+  5. Aerodrome traffic circuit:
+    1:
+      value: 10
+      percentage: 0
+    2:
+      value: 20
+      percentage: 0
+    3:
+      value: 27
+      percentage: -10
+    4:
+      value: 32
+      percentage: -20
+    5:
+      value: 40
+      percentage: -20
+  6. Airspace and procedures:
+    1:
+      value: 55
       percentage: 10
     2:
       value: 20
@@ -559,25 +735,9 @@ AFIS-I:
       value: 40
       percentage: 0
     5:
-      value: 50
-      percentage: 0
-  10. Common aircraft speed differential:
-    1:
-      value: 10
-      percentage: 0
-    2:
-      value: 20
-      percentage: 0
-    3:
-      value: 30
-      percentage: 0
-    4:
       value: 40
       percentage: 0
-    5:
-      value: 50
-      percentage: 0
-  11. Regular diverse operation types:
+  7. Traffic Mix:
     1:
       value: 20
       percentage: 0
@@ -593,7 +753,55 @@ AFIS-I:
     5:
       value: 90
       percentage: -10
-  12. Presence of other aircraft- traffic volume:
+  8. Night Operations:
+    1:
+      value: 20
+      percentage: 0
+    2:
+      value: 40
+      percentage: 0
+    3:
+      value: 54
+      percentage: -10
+    4:
+      value: 72
+      percentage: -10
+    5:
+      value: 90
+      percentage: -10
+  9. IFR/VFR:
+    1:
+      value: 20
+      percentage: 0
+    2:
+      value: 40
+      percentage: 0
+    3:
+      value: 54
+      percentage: -10
+    4:
+      value: 72
+      percentage: -10
+    5:
+      value: 90
+      percentage: -10
+  10. Helicopter Operations:
+    1:
+      value: 20
+      percentage: 0
+    2:
+      value: 40
+      percentage: 0
+    3:
+      value: 54
+      percentage: -10
+    4:
+      value: 72
+      percentage: -10
+    5:
+      value: 90
+      percentage: -10
+  11. Traffic volume:
     1:
       value: 20
       percentage: 0
@@ -609,7 +817,7 @@ AFIS-I:
     5:
       value: 70
       percentage: -30
-  13. Presence of other aircraft- traffic peaks:
+  12. Traffic peaks:
     1:
       value: 20
       percentage: 0
@@ -625,104 +833,136 @@ AFIS-I:
     5:
       value: 70
       percentage: -30
+  13. Common aircraft speed differential:
+    1:
+      value: 10
+      percentage: 0
+    2:
+      value: 20
+      percentage: 0
+    3:
+      value: 30
+      percentage: 0
+    4:
+      value: 40
+      percentage: 0
+    5:
+      value: 50
+      percentage: 0
+  14. Wake Turbulence:
+    1:
+      value: 1
+      percentage: 0
+    2:
+      value: 9
+      percentage: -10
+    3:
+      value: 12
+      percentage: -20
+    4:
+      value: 16
+      percentage: -20
+    5:
+      value: 20
+      percentage: -20
+  15. Wildlife Hazard:
+    1:
+      value: 1
+      percentage: 0
+    2:
+      value: 10
+      percentage: 0
+    3:
+      value: 14
+      percentage: -10
+    4:
+      value: 20
+      percentage: 0
+    5:
+      value: 25
+      percentage: 0
+  16. External hazards affecting aerodrome:
+    1:
+      value: 1
+      percentage: 0
+    2:
+      value: 9
+      percentage: -10
+    3:
+      value: 12
+      percentage: -20
+    4:
+      value: 16
+      percentage: -20
+    5:
+      value: 20
+      percentage: -20
+  17. Aeronautical activities affecting aerodrome:
+    1:
+      value: 1
+      percentage: 0
+    2:
+      value: 10
+      percentage: 0
+    3:
+      value: 15
+      percentage: 0
+    4:
+      value: 20
+      percentage: 0
+    5:
+      value: 25
+      percentage: 0
+  18. Terrain and vegetation:
+    1:
+      value: 1
+      percentage: 0
+    2:
+      value: 9
+      percentage: -10
+    3:
+      value: 14
+      percentage: -10
+    4:
+      value: 18
+      percentage: -10
+    5:
+      value: 22
+      percentage: -10
+  19. Common meteorological phenomena:
+    1:
+      value: 1
+      percentage: 0
+    2:
+      value: 9
+      percentage: -10
+    3:
+      value: 12
+      percentage: -20
+    4:
+      value: 16
+      percentage: -20
+    5:
+      value: 20
+      percentage: -20
+  20. Circuit Entry Points:
+    1:
+      value: 1
+      percentage: 0
+    2:
+      value: 10
+      percentage: 0
+    3:
+      value: 15
+      percentage: 0
+    4:
+      value: 20
+      percentage: 0
+    5:
+      value: 25
+      percentage: 0
 AFIS-V:
-  1. Presence of animals or people on aerodrome:
-    1:
-      value: 1
-      percentage: 0
-    2:
-      value: 9
-      percentage: -10
-    3:
-      value: 12
-      percentage: -20
-    4:
-      value: 16
-      percentage: -20
-    5:
-      value: 20
-      percentage: -20
-  2. External hazards affecting aerodrome:
-    1:
-      value: 1
-      percentage: 0
-    2:
-      value: 10
-      percentage: 0
-    3:
-      value: 14
-      percentage: -10
-    4:
-      value: 20
-      percentage: 0
-    5:
-      value: 25
-      percentage: 0
-  3. Aeronautical objects affecting aerodrome:
-    1:
-      value: 1
-      percentage: 0
-    2:
-      value: 9
-      percentage: -10
-    3:
-      value: 12
-      percentage: -20
-    4:
-      value: 16
-      percentage: -20
-    5:
-      value: 20
-      percentage: -20
-  4. Terrain and vegetation:
-    1:
-      value: 1
-      percentage: 0
-    2:
-      value: 10
-      percentage: 0
-    3:
-      value: 15
-      percentage: 0
-    4:
-      value: 20
-      percentage: 0
-    5:
-      value: 25
-      percentage: 0
-  5. Common meteorological phenomena:
-    1:
-      value: 10
-      percentage: 0
-    2:
-      value: 18
-      percentage: -10
-    3:
-      value: 27
-      percentage: -10
-    4:
-      value: 36
-      percentage: -10
-    5:
-      value: 45
-      percentage: -10
-  6. Aerodrome layout:
-    1:
-      value: 1
-      percentage: 0
-    2:
-      value: 9
-      percentage: -10
-    3:
-      value: 12
-      percentage: -20
-    4:
-      value: 1
-      percentage: -20
-    5:
-      value: 20
-      percentage: -20
-  7. Runway configuration:
+  1. Runway configuration:
     1:
       value: 10
       percentage: 0
@@ -738,7 +978,7 @@ AFIS-V:
     5:
       value: 40
       percentage: -20
-  8. Aerodrome traffic circuit:
+  2. Runway Type:
     1:
       value: 10
       percentage: 0
@@ -754,9 +994,57 @@ AFIS-V:
     5:
       value: 40
       percentage: -20
-  9. Airspace and procedures:
+  3. Taxiways:
     1:
-      value: 11
+      value: 10
+      percentage: 0
+    2:
+      value: 20
+      percentage: 0
+    3:
+      value: 27
+      percentage: -10
+    4:
+      value: 32
+      percentage: -20
+    5:
+      value: 40
+      percentage: -20
+  4. Navigation Aids:
+    1:
+      value: 10
+      percentage: 0
+    2:
+      value: 20
+      percentage: 0
+    3:
+      value: 27
+      percentage: -10
+    4:
+      value: 32
+      percentage: -20
+    5:
+      value: 40
+      percentage: -20
+  5. Aerodrome traffic circuit:
+    1:
+      value: 10
+      percentage: 0
+    2:
+      value: 20
+      percentage: 0
+    3:
+      value: 27
+      percentage: -10
+    4:
+      value: 32
+      percentage: -20
+    5:
+      value: 40
+      percentage: -20
+  6. Airspace and procedures:
+    1:
+      value: 55
       percentage: 10
     2:
       value: 20
@@ -768,25 +1056,9 @@ AFIS-V:
       value: 40
       percentage: 0
     5:
-      value: 50
-      percentage: 0
-  10. Common aircraft speed differential:
-    1:
-      value: 10
-      percentage: 0
-    2:
-      value: 20
-      percentage: 0
-    3:
-      value: 30
-      percentage: 0
-    4:
       value: 40
       percentage: 0
-    5:
-      value: 50
-      percentage: 0
-  11. Regular diverse operation types:
+  7. Traffic Mix:
     1:
       value: 20
       percentage: 0
@@ -802,7 +1074,55 @@ AFIS-V:
     5:
       value: 90
       percentage: -10
-  12. Presence of other aircraft- traffic volume:
+  8. Night Operations:
+    1:
+      value: 20
+      percentage: 0
+    2:
+      value: 40
+      percentage: 0
+    3:
+      value: 54
+      percentage: -10
+    4:
+      value: 72
+      percentage: -10
+    5:
+      value: 90
+      percentage: -10
+  9. IFR/VFR:
+    1:
+      value: 20
+      percentage: 0
+    2:
+      value: 40
+      percentage: 0
+    3:
+      value: 54
+      percentage: -10
+    4:
+      value: 72
+      percentage: -10
+    5:
+      value: 90
+      percentage: -10
+  10. Helicopter Operations:
+    1:
+      value: 20
+      percentage: 0
+    2:
+      value: 40
+      percentage: 0
+    3:
+      value: 54
+      percentage: -10
+    4:
+      value: 72
+      percentage: -10
+    5:
+      value: 90
+      percentage: -10
+  11. Traffic volume:
     1:
       value: 20
       percentage: 0
@@ -818,7 +1138,7 @@ AFIS-V:
     5:
       value: 70
       percentage: -30
-  13. Presence of other aircraft- traffic peaks:
+  12. Traffic peaks:
     1:
       value: 20
       percentage: 0
@@ -834,104 +1154,136 @@ AFIS-V:
     5:
       value: 70
       percentage: -30
+  13. Common aircraft speed differential:
+    1:
+      value: 10
+      percentage: 0
+    2:
+      value: 20
+      percentage: 0
+    3:
+      value: 30
+      percentage: 0
+    4:
+      value: 40
+      percentage: 0
+    5:
+      value: 50
+      percentage: 0
+  14. Wake Turbulence:
+    1:
+      value: 1
+      percentage: 0
+    2:
+      value: 9
+      percentage: -10
+    3:
+      value: 12
+      percentage: -20
+    4:
+      value: 16
+      percentage: -20
+    5:
+      value: 20
+      percentage: -20
+  15. Wildlife Hazard:
+    1:
+      value: 1
+      percentage: 0
+    2:
+      value: 10
+      percentage: 0
+    3:
+      value: 14
+      percentage: -10
+    4:
+      value: 20
+      percentage: 0
+    5:
+      value: 25
+      percentage: 0
+  16. External hazards affecting aerodrome:
+    1:
+      value: 1
+      percentage: 0
+    2:
+      value: 9
+      percentage: -10
+    3:
+      value: 12
+      percentage: -20
+    4:
+      value: 16
+      percentage: -20
+    5:
+      value: 20
+      percentage: -20
+  17. Aeronautical activities affecting aerodrome:
+    1:
+      value: 1
+      percentage: 0
+    2:
+      value: 10
+      percentage: 0
+    3:
+      value: 15
+      percentage: 0
+    4:
+      value: 20
+      percentage: 0
+    5:
+      value: 25
+      percentage: 0
+  18. Terrain and vegetation:
+    1:
+      value: 1
+      percentage: 0
+    2:
+      value: 9
+      percentage: -10
+    3:
+      value: 14
+      percentage: -10
+    4:
+      value: 18
+      percentage: -10
+    5:
+      value: 22
+      percentage: -10
+  19. Common meteorological phenomena:
+    1:
+      value: 1
+      percentage: 0
+    2:
+      value: 9
+      percentage: -10
+    3:
+      value: 12
+      percentage: -20
+    4:
+      value: 16
+      percentage: -20
+    5:
+      value: 20
+      percentage: -20
+  20. Circuit Entry Points:
+    1:
+      value: 1
+      percentage: 0
+    2:
+      value: 10
+      percentage: 0
+    3:
+      value: 15
+      percentage: 0
+    4:
+      value: 20
+      percentage: 0
+    5:
+      value: 25
+      percentage: 0
 UNICOM-I:
-  1. Presence of animals or people on aerodrome:
-    1:
-      value: 1
-      percentage: 0
-    2:
-      value: 9
-      percentage: -10
-    3:
-      value: 14
-      percentage: -10
-    4:
-      value: 18
-      percentage: -10
-    5:
-      value: 22
-      percentage: -10
-  2. External hazards affecting aerodrome:
-    1:
-      value: 1
-      percentage: 0
-    2:
-      value: 10
-      percentage: 0
-    3:
-      value: 14
-      percentage: -10
-    4:
-      value: 20
-      percentage: 0
-    5:
-      value: 25
-      percentage: 0
-  3. Aeronautical objects affecting aerodrome:
-    1:
-      value: 1
-      percentage: 0
-    2:
-      value: 10
-      percentage: 0
-    3:
-      value: 14
-      percentage: -10
-    4:
-      value: 18
-      percentage: -10
-    5:
-      value: 22
-      percentage: -10
-  4. Terrain and vegetation:
-    1:
-      value: 1
-      percentage: 0
-    2:
-      value: 10
-      percentage: 0
-    3:
-      value: 15
-      percentage: 0
-    4:
-      value: 20
-      percentage: 0
-    5:
-      value: 25
-      percentage: 0
-  5. Common meteorological phenomena:
-    1:
-      value: 10
-      percentage: 0
-    2:
-      value: 18
-      percentage: -10
-    3:
-      value: 27
-      percentage: -10
-    4:
-      value: 36
-      percentage: -10
-    5:
-      value: 45
-      percentage: -10
-  6. Aerodrome layout:
-    1:
-      value: 1
-      percentage: 0
-    2:
-      value: 10
-      percentage: 0
-    3:
-      value: 15
-      percentage: 0
-    4:
-      value: 1
-      percentage: 0
-    5:
-      value: 25
-      percentage: 0
-  7. Runway configuration:
+  1. Runway configuration:
     1:
       value: 10
       percentage: 0
@@ -947,7 +1299,7 @@ UNICOM-I:
     5:
       value: 45
       percentage: -10
-  8. Aerodrome traffic circuit:
+  2. Runway Type:
     1:
       value: 10
       percentage: 0
@@ -963,9 +1315,57 @@ UNICOM-I:
     5:
       value: 45
       percentage: -10
-  9. Airspace and procedures:
+  3. Taxiways:
     1:
-      value: 11
+      value: 10
+      percentage: 0
+    2:
+      value: 20
+      percentage: 0
+    3:
+      value: 30
+      percentage: 0
+    4:
+      value: 36
+      percentage: -10
+    5:
+      value: 45
+      percentage: -10
+  4. Navigation Aids:
+    1:
+      value: 10
+      percentage: 0
+    2:
+      value: 20
+      percentage: 0
+    3:
+      value: 30
+      percentage: 0
+    4:
+      value: 36
+      percentage: -10
+    5:
+      value: 45
+      percentage: -10
+  5. Aerodrome traffic circuit:
+    1:
+      value: 10
+      percentage: 0
+    2:
+      value: 20
+      percentage: 0
+    3:
+      value: 30
+      percentage: 0
+    4:
+      value: 36
+      percentage: -10
+    5:
+      value: 45
+      percentage: -10
+  6. Airspace and procedures:
+    1:
+      value: 55
       percentage: 10
     2:
       value: 20
@@ -977,25 +1377,9 @@ UNICOM-I:
       value: 40
       percentage: 0
     5:
-      value: 50
-      percentage: 0
-  10. Common aircraft speed differential:
-    1:
-      value: 10
-      percentage: 0
-    2:
-      value: 20
-      percentage: 0
-    3:
-      value: 30
-      percentage: 0
-    4:
       value: 40
       percentage: 0
-    5:
-      value: 50
-      percentage: 0
-  11. Regular diverse operation types:
+  7. Traffic Mix:
     1:
       value: 20
       percentage: 0
@@ -1011,7 +1395,55 @@ UNICOM-I:
     5:
       value: 90
       percentage: -10
-  12. Presence of other aircraft- traffic volume:
+  8. Night Operations:
+    1:
+      value: 20
+      percentage: 0
+    2:
+      value: 36
+      percentage: -10
+    3:
+      value: 54
+      percentage: -10
+    4:
+      value: 72
+      percentage: -10
+    5:
+      value: 90
+      percentage: -10
+  9. IFR/VFR:
+    1:
+      value: 20
+      percentage: 0
+    2:
+      value: 36
+      percentage: -10
+    3:
+      value: 54
+      percentage: -10
+    4:
+      value: 72
+      percentage: -10
+    5:
+      value: 90
+      percentage: -10
+  10. Helicopter Operations:
+    1:
+      value: 20
+      percentage: 0
+    2:
+      value: 36
+      percentage: -10
+    3:
+      value: 54
+      percentage: -10
+    4:
+      value: 72
+      percentage: -10
+    5:
+      value: 90
+      percentage: -10
+  11. Traffic volume:
     1:
       value: 20
       percentage: 0
@@ -1027,7 +1459,7 @@ UNICOM-I:
     5:
       value: 100
       percentage: 0
-  13. Presence of other aircraft- traffic peaks:
+  12. Traffic peaks:
     1:
       value: 20
       percentage: 0
@@ -1042,105 +1474,137 @@ UNICOM-I:
       percentage: 0
     5:
       value: 100
+      percentage: 0
+  13. Common aircraft speed differential:
+    1:
+      value: 10
+      percentage: 0
+    2:
+      value: 20
+      percentage: 0
+    3:
+      value: 30
+      percentage: 0
+    4:
+      value: 40
+      percentage: 0
+    5:
+      value: 50
+      percentage: 0
+  14. Wake Turbulence:
+    1:
+      value: 1
+      percentage: 0
+    2:
+      value: 9
+      percentage: -10
+    3:
+      value: 14
+      percentage: -10
+    4:
+      value: 18
+      percentage: -10
+    5:
+      value: 22
+      percentage: -10
+  15. Wildlife Hazard:
+    1:
+      value: 1
+      percentage: 0
+    2:
+      value: 10
+      percentage: 0
+    3:
+      value: 14
+      percentage: -10
+    4:
+      value: 20
+      percentage: 0
+    5:
+      value: 25
+      percentage: 0
+  16. External hazards affecting aerodrome:
+    1:
+      value: 1
+      percentage: 0
+    2:
+      value: 10
+      percentage: 0
+    3:
+      value: 14
+      percentage: -10
+    4:
+      value: 18
+      percentage: -10
+    5:
+      value: 22
+      percentage: -10
+  17. Aeronautical activities affecting aerodrome:
+    1:
+      value: 1
+      percentage: 0
+    2:
+      value: 10
+      percentage: 0
+    3:
+      value: 15
+      percentage: 0
+    4:
+      value: 20
+      percentage: 0
+    5:
+      value: 25
+      percentage: 0
+  18. Terrain and vegetation:
+    1:
+      value: 1
+      percentage: 0
+    2:
+      value: 9
+      percentage: -10
+    3:
+      value: 14
+      percentage: -10
+    4:
+      value: 18
+      percentage: -10
+    5:
+      value: 22
+      percentage: -10
+  19. Common meteorological phenomena:
+    1:
+      value: 1
+      percentage: 0
+    2:
+      value: 10
+      percentage: 0
+    3:
+      value: 15
+      percentage: 0
+    4:
+      value: 20
+      percentage: 0
+    5:
+      value: 25
+      percentage: 0
+  20. Circuit Entry Points:
+    1:
+      value: 1
+      percentage: 0
+    2:
+      value: 10
+      percentage: 0
+    3:
+      value: 15
+      percentage: 0
+    4:
+      value: 20
+      percentage: 0
+    5:
+      value: 25
       percentage: 0
 UNICOM-V:
-  1. Presence of animals or people on aerodrome:
-    1:
-      value: 1
-      percentage: 0
-    2:
-      value: 9
-      percentage: -10
-    3:
-      value: 14
-      percentage: -10
-    4:
-      value: 18
-      percentage: -10
-    5:
-      value: 22
-      percentage: -10
-  2. External hazards affecting aerodrome:
-    1:
-      value: 1
-      percentage: 0
-    2:
-      value: 9
-      percentage: -10
-    3:
-      value: 14
-      percentage: -10
-    4:
-      value: 20
-      percentage: 0
-    5:
-      value: 25
-      percentage: 0
-  3. Aeronautical objects affecting aerodrome:
-    1:
-      value: 1
-      percentage: 0
-    2:
-      value: 10
-      percentage: 0
-    3:
-      value: 14
-      percentage: -10
-    4:
-      value: 18
-      percentage: -10
-    5:
-      value: 22
-      percentage: -10
-  4. Terrain and vegetation:
-    1:
-      value: 1
-      percentage: 0
-    2:
-      value: 10
-      percentage: 0
-    3:
-      value: 15
-      percentage: 0
-    4:
-      value: 20
-      percentage: 0
-    5:
-      value: 25
-      percentage: 0
-  5. Common meteorological phenomena:
-    1:
-      value: 10
-      percentage: 0
-    2:
-      value: 18
-      percentage: -10
-    3:
-      value: 27
-      percentage: -10
-    4:
-      value: 36
-      percentage: -10
-    5:
-      value: 45
-      percentage: -10
-  6. Aerodrome layout:
-    1:
-      value: 1
-      percentage: 0
-    2:
-      value: 10
-      percentage: 0
-    3:
-      value: 15
-      percentage: 0
-    4:
-      value: 1
-      percentage: 0
-    5:
-      value: 25
-      percentage: 0
-  7. Runway configuration:
+  1. Runway configuration:
     1:
       value: 10
       percentage: 0
@@ -1156,7 +1620,7 @@ UNICOM-V:
     5:
       value: 45
       percentage: -10
-  8. Aerodrome traffic circuit:
+  2. Runway Type:
     1:
       value: 10
       percentage: 0
@@ -1172,9 +1636,57 @@ UNICOM-V:
     5:
       value: 45
       percentage: -10
-  9. Airspace and procedures:
+  3. Taxiways:
     1:
-      value: 11
+      value: 10
+      percentage: 0
+    2:
+      value: 20
+      percentage: 0
+    3:
+      value: 30
+      percentage: 0
+    4:
+      value: 36
+      percentage: -10
+    5:
+      value: 45
+      percentage: -10
+  4. Navigation Aids:
+    1:
+      value: 10
+      percentage: 0
+    2:
+      value: 20
+      percentage: 0
+    3:
+      value: 30
+      percentage: 0
+    4:
+      value: 36
+      percentage: -10
+    5:
+      value: 45
+      percentage: -10
+  5. Aerodrome traffic circuit:
+    1:
+      value: 10
+      percentage: 0
+    2:
+      value: 20
+      percentage: 0
+    3:
+      value: 30
+      percentage: 0
+    4:
+      value: 36
+      percentage: -10
+    5:
+      value: 45
+      percentage: -10
+  6. Airspace and procedures:
+    1:
+      value: 55
       percentage: 10
     2:
       value: 20
@@ -1186,25 +1698,9 @@ UNICOM-V:
       value: 40
       percentage: 0
     5:
-      value: 50
-      percentage: 0
-  10. Common aircraft speed differential:
-    1:
-      value: 10
-      percentage: 0
-    2:
-      value: 20
-      percentage: 0
-    3:
-      value: 30
-      percentage: 0
-    4:
       value: 40
       percentage: 0
-    5:
-      value: 50
-      percentage: 0
-  11. Regular diverse operation types:
+  7. Traffic Mix:
     1:
       value: 20
       percentage: 0
@@ -1220,7 +1716,55 @@ UNICOM-V:
     5:
       value: 90
       percentage: -10
-  12. Presence of other aircraft- traffic volume:
+  8. Night Operations:
+    1:
+      value: 20
+      percentage: 0
+    2:
+      value: 36
+      percentage: -10
+    3:
+      value: 54
+      percentage: -10
+    4:
+      value: 72
+      percentage: -10
+    5:
+      value: 90
+      percentage: -10
+  9. IFR/VFR:
+    1:
+      value: 20
+      percentage: 0
+    2:
+      value: 36
+      percentage: -10
+    3:
+      value: 54
+      percentage: -10
+    4:
+      value: 72
+      percentage: -10
+    5:
+      value: 90
+      percentage: -10
+  10. Helicopter Operations:
+    1:
+      value: 20
+      percentage: 0
+    2:
+      value: 36
+      percentage: -10
+    3:
+      value: 54
+      percentage: -10
+    4:
+      value: 72
+      percentage: -10
+    5:
+      value: 90
+      percentage: -10
+  11. Traffic volume:
     1:
       value: 20
       percentage: 0
@@ -1236,7 +1780,7 @@ UNICOM-V:
     5:
       value: 100
       percentage: 0
-  13. Presence of other aircraft- traffic peaks:
+  12. Traffic peaks:
     1:
       value: 20
       percentage: 0
@@ -1252,152 +1796,136 @@ UNICOM-V:
     5:
       value: 100
       percentage: 0
-VFR:
-  1. Presence of animals or people on aerodrome:
+  13. Common aircraft speed differential:
     1:
-      value: 1.0
-      percentage: 0.0
+      value: 10
+      percentage: 0
     2:
-      value: 10.0
-      percentage: 0.0
+      value: 20
+      percentage: 0
     3:
-      value: 15.0
-      percentage: 0.0
+      value: 30
+      percentage: 0
     4:
-      value: 20.0
-      percentage: 0.0
+      value: 40
+      percentage: 0
     5:
-      value: 25.0
-      percentage: 0.0
-  2. External hazards affecting aerodrome:
+      value: 50
+      percentage: 0
+  14. Wake Turbulence:
     1:
-      value: 1.0
-      percentage: 0.0
+      value: 1
+      percentage: 0
     2:
-      value: 10.0
-      percentage: 0.0
+      value: 9
+      percentage: -10
     3:
-      value: 15.0
-      percentage: 0.0
+      value: 14
+      percentage: -10
     4:
-      value: 20.0
-      percentage: 0.0
+      value: 18
+      percentage: -10
     5:
-      value: 25.0
-      percentage: 0.0
-  3. Aeronautical objects affecting aerodrome:
+      value: 22
+      percentage: -10
+  15. Wildlife Hazard:
     1:
-      value: 1.0
-      percentage: 0.0
+      value: 1
+      percentage: 0
     2:
-      value: 10.0
-      percentage: 0.0
+      value: 9
+      percentage: -10
     3:
-      value: 15.0
-      percentage: 0.0
+      value: 14
+      percentage: -10
     4:
-      value: 20.0
-      percentage: 0.0
+      value: 20
+      percentage: 0
     5:
-      value: 25.0
-      percentage: 0.0
-  4. Terrain and vegetation:
+      value: 25
+      percentage: 0
+  16. External hazards affecting aerodrome:
     1:
-      value: 1.0
-      percentage: 0.0
+      value: 1
+      percentage: 0
     2:
-      value: 10.0
-      percentage: 0.0
+      value: 10
+      percentage: 0
     3:
-      value: 15.0
-      percentage: 0.0
+      value: 14
+      percentage: -10
     4:
-      value: 20.0
-      percentage: 0.0
+      value: 18
+      percentage: -10
     5:
-      value: 25.0
-      percentage: 0.0
-  5. Common meteorological phenomena:
+      value: 22
+      percentage: -10
+  17. Aeronautical activities affecting aerodrome:
     1:
-      value: 10.0
-      percentage: 0.0
+      value: 1
+      percentage: 0
     2:
-      value: 20.0
-      percentage: 0.0
+      value: 10
+      percentage: 0
     3:
-      value: 30.0
-      percentage: 0.0
+      value: 15
+      percentage: 0
     4:
-      value: 40.0
-      percentage: 0.0
+      value: 20
+      percentage: 0
     5:
-      value: 50.0
-      percentage: 0.0
-  6. Aerodrome layout:
+      value: 25
+      percentage: 0
+  18. Terrain and vegetation:
     1:
-      value: 1.0
-      percentage: 0.0
+      value: 1
+      percentage: 0
     2:
-      value: 10.0
-      percentage: 0.0
+      value: 9
+      percentage: -10
     3:
-      value: 15.0
-      percentage: 0.0
+      value: 14
+      percentage: -10
     4:
-      value: 1.0
-      percentage: 0.0
+      value: 18
+      percentage: -10
     5:
-      value: 25.0
-      percentage: 0.0
-  7. Runway configuration:
+      value: 22
+      percentage: -10
+  19. Common meteorological phenomena:
     1:
-      value: 10.0
-      percentage: 0.0
+      value: 1
+      percentage: 0
     2:
-      value: 20.0
-      percentage: 0.0
+      value: 10
+      percentage: 0
     3:
-      value: 30.0
-      percentage: 0.0
+      value: 15
+      percentage: 0
     4:
-      value: 40.0
-      percentage: 0.0
+      value: 20
+      percentage: 0
     5:
-      value: 50.0
-      percentage: 0.0
-  8. Aerodrome traffic circuit:
+      value: 25
+      percentage: 0
+  20. Circuit Entry Points:
     1:
-      value: 10.0
-      percentage: 0.0
+      value: 1
+      percentage: 0
     2:
-      value: 20.0
-      percentage: 0.0
+      value: 10
+      percentage: 0
     3:
-      value: 30.0
-      percentage: 0.0
+      value: 15
+      percentage: 0
     4:
-      value: 40.0
-      percentage: 0.0
+      value: 20
+      percentage: 0
     5:
-      value: 50.0
-      percentage: 0.0
-  9. Airspace and procedures:
-    1:
-      value: 10.0
-      percentage: 0.0
-    2:
-      value: 20.0
-      percentage: 0.0
-    3:
-      value: 30.0
-      percentage: 0.0
-    4:
-      value: 40.0
-      percentage: 0.0
-    5:
-      value: 50.0
-      percentage: 0.0
-  10. Common aircraft speed differential:
+      value: 25
+      percentage: 0
+IFR:
+  1. Runway configuration:
     1:
       value: 10.0
       percentage: 0.0
@@ -1413,7 +1941,87 @@ VFR:
     5:
       value: 50.0
       percentage: 0.0
-  11. Regular diverse operation types:
+  2. Runway Type:
+    1:
+      value: 10.0
+      percentage: 0.0
+    2:
+      value: 20.0
+      percentage: 0.0
+    3:
+      value: 30.0
+      percentage: 0.0
+    4:
+      value: 40.0
+      percentage: 0.0
+    5:
+      value: 50.0
+      percentage: 0.0
+  3. Taxiways:
+    1:
+      value: 10.0
+      percentage: 0.0
+    2:
+      value: 20.0
+      percentage: 0.0
+    3:
+      value: 30.0
+      percentage: 0.0
+    4:
+      value: 40.0
+      percentage: 0.0
+    5:
+      value: 50.0
+      percentage: 0.0
+  4. Navigation Aids:
+    1:
+      value: 10.0
+      percentage: 0.0
+    2:
+      value: 20.0
+      percentage: 0.0
+    3:
+      value: 30.0
+      percentage: 0.0
+    4:
+      value: 40.0
+      percentage: 0.0
+    5:
+      value: 50.0
+      percentage: 0.0
+  5. Aerodrome traffic circuit:
+    1:
+      value: 10.0
+      percentage: 0.0
+    2:
+      value: 20.0
+      percentage: 0.0
+    3:
+      value: 30.0
+      percentage: 0.0
+    4:
+      value: 40.0
+      percentage: 0.0
+    5:
+      value: 50.0
+      percentage: 0.0
+  6. Airspace and procedures:
+    1:
+      value: 50.0
+      percentage: 0.0
+    2:
+      value: 20.0
+      percentage: 0.0
+    3:
+      value: 30.0
+      percentage: 0.0
+    4:
+      value: 40.0
+      percentage: 0.0
+    5:
+      value: 40.0
+      percentage: 0.0
+  7. Traffic Mix:
     1:
       value: 20.0
       percentage: 0.0
@@ -1429,7 +2037,7 @@ VFR:
     5:
       value: 100.0
       percentage: 0.0
-  12. Presence of other aircraft- traffic volume:
+  8. Night Operations:
     1:
       value: 20.0
       percentage: 0.0
@@ -1445,7 +2053,7 @@ VFR:
     5:
       value: 100.0
       percentage: 0.0
-  13. Presence of other aircraft- traffic peaks:
+  9. IFR/VFR:
     1:
       value: 20.0
       percentage: 0.0
@@ -1460,4 +2068,180 @@ VFR:
       percentage: 0.0
     5:
       value: 100.0
+      percentage: 0.0
+  10. Helicopter Operations:
+    1:
+      value: 20.0
+      percentage: 0.0
+    2:
+      value: 40.0
+      percentage: 0.0
+    3:
+      value: 60.0
+      percentage: 0.0
+    4:
+      value: 80.0
+      percentage: 0.0
+    5:
+      value: 100.0
+      percentage: 0.0
+  11. Traffic volume:
+    1:
+      value: 20.0
+      percentage: 0.0
+    2:
+      value: 40.0
+      percentage: 0.0
+    3:
+      value: 60.0
+      percentage: 0.0
+    4:
+      value: 80.0
+      percentage: 0.0
+    5:
+      value: 100.0
+      percentage: 0.0
+  12. Traffic peaks:
+    1:
+      value: 20.0
+      percentage: 0.0
+    2:
+      value: 40.0
+      percentage: 0.0
+    3:
+      value: 60.0
+      percentage: 0.0
+    4:
+      value: 80.0
+      percentage: 0.0
+    5:
+      value: 100.0
+      percentage: 0.0
+  13. Common aircraft speed differential:
+    1:
+      value: 10.0
+      percentage: 0.0
+    2:
+      value: 20.0
+      percentage: 0.0
+    3:
+      value: 30.0
+      percentage: 0.0
+    4:
+      value: 40.0
+      percentage: 0.0
+    5:
+      value: 50.0
+      percentage: 0.0
+  14. Wake Turbulence:
+    1:
+      value: 1.0
+      percentage: 0.0
+    2:
+      value: 10.0
+      percentage: 0.0
+    3:
+      value: 15.0
+      percentage: 0.0
+    4:
+      value: 20.0
+      percentage: 0.0
+    5:
+      value: 25.0
+      percentage: 0.0
+  15. Wildlife Hazard:
+    1:
+      value: 1.0
+      percentage: 0.0
+    2:
+      value: 10.0
+      percentage: 0.0
+    3:
+      value: 15.0
+      percentage: 0.0
+    4:
+      value: 20.0
+      percentage: 0.0
+    5:
+      value: 25.0
+      percentage: 0.0
+  16. External hazards affecting aerodrome:
+    1:
+      value: 1.0
+      percentage: 0.0
+    2:
+      value: 10.0
+      percentage: 0.0
+    3:
+      value: 15.0
+      percentage: 0.0
+    4:
+      value: 20.0
+      percentage: 0.0
+    5:
+      value: 25.0
+      percentage: 0.0
+  17. Aeronautical activities affecting aerodrome:
+    1:
+      value: 1.0
+      percentage: 0.0
+    2:
+      value: 10.0
+      percentage: 0.0
+    3:
+      value: 15.0
+      percentage: 0.0
+    4:
+      value: 20.0
+      percentage: 0.0
+    5:
+      value: 25.0
+      percentage: 0.0
+  18. Terrain and vegetation:
+    1:
+      value: 1.0
+      percentage: 0.0
+    2:
+      value: 10.0
+      percentage: 0.0
+    3:
+      value: 15.0
+      percentage: 0.0
+    4:
+      value: 20.0
+      percentage: 0.0
+    5:
+      value: 25.0
+      percentage: 0.0
+  19. Common meteorological phenomena:
+    1:
+      value: 1.0
+      percentage: 0.0
+    2:
+      value: 10.0
+      percentage: 0.0
+    3:
+      value: 15.0
+      percentage: 0.0
+    4:
+      value: 20.0
+      percentage: 0.0
+    5:
+      value: 25.0
+      percentage: 0.0
+  20. Circuit Entry Points:
+    1:
+      value: 1.0
+      percentage: 0.0
+    2:
+      value: 10.0
+      percentage: 0.0
+    3:
+      value: 15.0
+      percentage: 0.0
+    4:
+      value: 20.0
+      percentage: 0.0
+    5:
+      value: 25.0
       percentage: 0.0

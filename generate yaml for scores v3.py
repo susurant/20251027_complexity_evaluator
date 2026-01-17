@@ -2,12 +2,16 @@ import pandas as pd
 import yaml
 
 # --- File and sheet names ---
-excel_file = "C:\\Users\\User\\Downloads\\Aerodrome Complexity Taupo TEST.xlsm"
-ifrs_sheet = "IFR"
+#excel_file = "C:\\Users\\User\\Downloads\\Aerodrome Complexity Taupo TEST.xlsm"
+excel_file = "C:\\Users\\User\\Downloads\\ACE Word Pictures.xlsx"
+
+ifrs_sheet = "VFR"
 atc_sheets = ["ATC-I", "ATC-V", "AFIS-I", "AFIS-V", "UNICOM-I", "UNICOM-V", "IFR"]
 
 # --- Read IFR sheet ---
-ifrs_df = pd.read_excel(excel_file, sheet_name=ifrs_sheet, usecols="A:F", nrows=13)
+#ifrs_df = pd.read_excel(excel_file, sheet_name=ifrs_sheet, usecols="A:F", nrows=13)
+ifrs_df = pd.read_excel(excel_file, sheet_name=ifrs_sheet, usecols="A:F", nrows=20)
+
 ifrs_df.columns = [str(c).strip() for c in ifrs_df.columns]
 ifrs_df.set_index(ifrs_df.columns[0], inplace=True)
 ifrs_df.columns = range(1, len(ifrs_df.columns) + 1)
@@ -21,7 +25,7 @@ ifrs_df = ifrs_df.apply(pd.to_numeric, errors='coerce').fillna(0)
 
 # --- Function to read ATC sheets and convert to (multiplier, raw percentage) ---
 def read_atc_sheet(sheet_name):
-    df = pd.read_excel(excel_file, sheet_name=sheet_name, usecols="A:F", nrows=13)
+    df = pd.read_excel(excel_file, sheet_name=sheet_name, usecols="A:F", nrows=20)
     df.columns = [str(c).strip() for c in df.columns]
     df.set_index(df.columns[0], inplace=True)
     df.index = df.index.map(clean_questions)
@@ -118,7 +122,7 @@ for sheet in atc_sheets:
         adjusted_ifr[sheet] = sheet_dict
 
 # --- Save to YAML ---
-with open("adjusted_ifr.yaml", "w") as f:
+with open("adjusted_vfr.yaml", "w") as f:
     #yaml.dump(adjusted_ifr, f, sort_keys=False, allow_unicode=True, default_flow_style=False)
     yaml.dump(adjusted_ifr, f, sort_keys=False)
 print("YAML file saved as 'adjusted_ifr_2.yaml'")
